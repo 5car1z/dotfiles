@@ -1,0 +1,19 @@
+# Easier navigation: .., ..., ...., ....., ~ 
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias ~="cd ~" 
+
+# Shortcuts
+alias dl="cd ~/Downloads"
+alias dt="cd ~/Desktop"
+alias h="history"
+alias j="jobs"
+alias dfs="cd ~/dotfiles"
+
+# List all files colorized in long format.
+alias l="ls -lF ${colorflag}"
+
+# Networking
+alias fastping="ping -c 20 -s.2"
