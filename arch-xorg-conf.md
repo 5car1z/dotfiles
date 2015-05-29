@@ -20,6 +20,8 @@ Configure monitor or multi monitor settings and save to config file.
 
 ##Xkeyboard Configuration
 
+NOTE: ADD THE `KEYMAP=uk` line to `/etc/vconsole.conf` to the arch main installation post to make setloadkeys uk permanent on system reboot/boot. 
+
 Add the line below with the two letter abbreivation country code. 
 
 ```.xintrc
@@ -55,6 +57,7 @@ sudo vim /etc/vconsole.conf
 
 ```
 FONT=iso1.14.gz
+
 ###System Wide Default Fonts
 
 ```
@@ -63,13 +66,31 @@ vim ~/.config/fontconfig/fonts.conf
 ```
 
 ``` fonts.conf
-
-
-
+<?xml version='1.0'?>
+<!DOCTYPE fontconfig SYSTEM 'fonts.dtd'>
+<fontconfig>
+   <!-- Set preferred serif, sans serif, and monospace fonts. -->
+   <alias>
+     <family>serif</family>
+     <prefer><family>Inconsolata</family></prefer>
+   </alias>
+   <alias>
+     <family>sans-serif</family>
+     <prefer><family>Inconsolata</family></prefer>
+   </alias>
+   <alias>
+      <family>sans</family>
+      <prefer><family>Inconsolata</family></prefer>
+   </alias>
+   <alias>
+      <family>monospace</family>
+      <prefer><family>Inconsolata</family></prefer>
+   </alias>
+   </fontconfig>
 
 ```
 
-###Terminal Fonts
+##X Terminal Fonts
 Remember to use a fixed-width or monospace font for your terminal to avoid inconsistencies or squished characters.
 
 `xfontsel` is useful for finding the full entry name of a font with all of its parameters.
@@ -127,3 +148,12 @@ xterm*faceName:		-misc-inconsolata-medium-r-normal--17-120-100-100-p-0-iso8859-1
 ``` .Xresources
 
 ```
+
+**Sources**
+
+* [How To Set Default Fonts and Font Aliases on Linux](http://seasonofcode.com/posts/how-to-set-default-fonts-and-font-aliases-on-linux.html)
+* [Arch Wiki - Xterm Fonts](https://wiki.archlinux.org/index.php/Xterm#Fonts)
+* [Ubuntu Forums - Xterm Fonts Thread](http://ubuntuforums.org/showthread.php?t=720620)
+* [SuperUser Xterm Cursor Thread}(http://superuser.com/questions/607478/how-do-you-change-the-xterm-cursor-to-an-i-beam-or-vertical-bar)
+* [Ask Ubuntu - Xterm Default Font Size Thread](http://askubuntu.com/questions/161652/how-to-change-the-default-font-size-of-xterm)
+* [About Linux - Configuring Xterm in Linux(http://www.aboutlinux.info/2005/10/configuring-xterm-in-linux.html)
