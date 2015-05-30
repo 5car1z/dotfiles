@@ -2,6 +2,7 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+. ~/.inputrc
 . ~/.alias
 . ~/.functions
 . ~/.env
@@ -42,6 +43,7 @@ fi
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
     xterm-color) color_prompt=yes;;
+    echo -e -n "\x1b[\x33 q" 
 esac
 
 # uncomment for a colored prompt, if the terminal has the capability; turned
@@ -56,7 +58,7 @@ if [ -n "$force_color_prompt" ]; then
 	# a case would tend to support setf rather than setaf.)
 	color_prompt=yes
     else
-	color_prompt=
+	color_prompt=no
     fi
 fi
 

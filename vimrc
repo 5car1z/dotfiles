@@ -6,8 +6,8 @@ set showmode            "Show current mode at the bottom of the screen.
 
 "2 -- Themes & Colours
 
-set t_Co=256	"Enables 256-color mode. 
-syntax enable   "Enables syntax highlighting.
+set t_Co=256		"Enables 256-color mode. 
+syntax enable   	"Enables syntax highlighting.
 
 "3 -- UI
 
