@@ -32,8 +32,34 @@ setxkbmap gb
 
 ##Installing fonts
 
+When installing fonts manually (i.e. none of these methods) or if your fonts don't show up after installing, run the next command. 
+
+Which verifies the font cache ??
+
+```
+fc-cache -v -f
+```
+
 ```
 sudo pacman -S ttf-inconsolata
+```
+
+github lemon method
+```
+clone https://github.com/phallus/fonts.git
+```
+
+
+Fonts From the Aurum
+
+In a suitable directory like your user's home directory. 
+
+```
+wget -v https://aur.archlinux.org/packages/tt/ttf-chromeos-fonts/ttf-chromeos-fonts.tar.gz
+tar -zxvf ttf-chromeos-fonts.tar.gztar -zxvf ttf-chromeos-fonts.tar.gz
+cd ttf-chromeos-fonts/
+makepkg PKGBUILD
+sudo pacman -U ttf-chromeos-fonts-1.23.0-5-any.pkg.tar.xz 
 ```
 
 ###Default Console Fonts
@@ -93,11 +119,27 @@ vim ~/.config/fontconfig/fonts.conf
 ##X Terminal Fonts
 Remember to use a fixed-width or monospace font for your terminal to avoid inconsistencies or squished characters.
 
-`xfontsel` is useful for finding the full entry name of a font with all of its parameters.
+`xfontsel` is useful for finding the full entry name of a font with all of its parameters. Although for some reason it seems to only pick up certain font types.
 
 ```
 sudo pacman -S xorg-xfontsel
 ```
+
+Another method of listing all fonts in their installed directories is with:
+
+```
+fc-list
+```
+
+To single out certain fonts use grep:
+
+Where source is relevant to the font name you are wanting to find. 
+
+```
+fc-list | grep -i "source"
+```
+
+
 
 ####Xterm
 
@@ -115,7 +157,7 @@ In an xterm terminal session type `xterm -fa` followed by the fonts Xft *"face-N
 xterm -fa inconsolata 
 ```
 
-To specify font size use `-fs and then the size value:
+To specify font size use `-fs` and then the size value:
 
 ```
 xterm -fa inconsolata -fs 12
@@ -132,7 +174,7 @@ xterm -fn -misc-inconsolata-medium-r-normal--17-120-100-100-p-0-iso8859-1
 To make it persistent, configure xterm in `.Xresources` like this:
 
 ``` .Xresources
-xterm*font:	inconsolata: fontsize=12
+xterm*faceName:          Inconsolata:size=12
 ```
 
 For the exact font details instead enter line like this (for example):

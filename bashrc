@@ -43,7 +43,6 @@ fi
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
     xterm-color) color_prompt=yes;;
-    echo -e -n "\x1b[\x33 q" 
 esac
 
 # uncomment for a colored prompt, if the terminal has the capability; turned
@@ -69,10 +68,11 @@ else
 fi
 unset color_prompt force_color_prompt
 
-# If this is an xterm set the title to user@host:dir
+# If this is an xterm set the title to user@host:dir & the cursor to a blinking underscore. 
 case "$TERM" in
 xterm*|rxvt*)
-    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1" # sets the title.
+    echo -e -n "\x1b[\x33 q" # changes cursor to a blinking underscore. 
     ;;
 *)
     ;;
