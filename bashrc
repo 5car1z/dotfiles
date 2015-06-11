@@ -72,11 +72,17 @@ unset color_prompt force_color_prompt
 case "$TERM" in
 xterm*|rxvt*)
     PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1" # sets the title.
-    echo -e -n "\x1b[\x33 q" # changes cursor to a blinking underscore. 
-    ;;
-*)
     ;;
 esac
+
+term_emulator="$(ps -p $PPID | awk '{print $4}' | sed '/CMD/d')"
+
+case $term_emulator in
+xterm) 
+    echo -e -n "\x1b[\x33 q" # changes cursor to a blinking underscore. 
+    ;;
+esac
+
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
