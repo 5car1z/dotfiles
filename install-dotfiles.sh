@@ -13,7 +13,7 @@ vimdircol=~/.vim/colors
 oldvimcoldir=~/dotfiles_old/.vim/colors
                                  					  # old dotfiles backup directory
 dotfiles="bashrc bash_profile inputrc functions alias env vimrc"          # list of files/folders to symlink to homedir
-vimfiles="desertink.vim lucid.vim molokai_dark.vim molokai.vim penultimate.vim"
+vimfiles="desertink.vim molokai_dark.vim molokai.vim"
 
 ##########
 
