@@ -6,54 +6,51 @@
 
 ########## Variables
 
-dir=~/dotfiles                   	                                  # dotfiles directory
-olddir=~/dotfiles_old
+dotfilesdir=~/dotfiles                   	                          # dotfiles directory
 
-vimdircol=~/.vim/colors
-oldvimcoldir=~/dotfiles_old/.vim/colors
-                                 					  # old dotfiles backup directory
-dotfiles="bashrc bash_profile inputrc functions alias env vimrc"          # list of files/folders to symlink to homedir
-vimfiles="desertink.vim molokai_dark.vim molokai.vim"
+vimcoldir=~/.vim/colors                                                   # vim color schemes directory
+cheatsheetdir="~/.cheat"
+                                 					  
+dotfiles="bashrc bash_profile inputrc functions alias env vimrc"          # list of files to symlink to home directory
+vimfiles="desertink.vim molokai_dark.vim molokai.vim"                     # list of vim configuration files to symlink to home directory
 
 ##########
 
-# create dotfiles_old in homedir
-echo -n "Creating $olddir for backup of any existing dotfiles in ~ ..."
-mkdir -p $olddir
-echo "done"
-
-# create .vim folder in dotfiles_old
-echo -n "Creating $oldvimcoldir for backup of any existing vim config files in ~/.vim/colors ..."
-mkdir -p $oldvimcoldir
-echo "done"
-
-# create vim configuration folder in homedir 
+# create .vim configuration folder in home directory
 echo -n "Creating vim colors configuration folder in ~ ..."
-mkdir -p $vimdircol
+mkdir -p $vimcoldir
+echo "done"
+
+# create .cheat configuration folder in home directory
+echo -n "Creating cheat storage folder in ~ ..."
+mkdir -p $cheatsheetdir
 echo "done"
 
 # change to the dotfiles directory
-echo -n "Changing to the $dir directory ..."
-cd $dir
+echo -n "Changing to the $dotfilesdir directory ..."
+cd $dotfilesdir
 echo "done"
 
-# move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks from the homedir to any files in the ~/dotfiles directory specified in $files
+# Create symlinks from ~ to any files in the ~/dotfiles directory specified from the $dotfiles variable
 for dotfile in $dotfiles; do
-    echo "Moving any existing dotfiles from ~ to $olddir"
-    mv ~/.$dotfile ~/dotfiles_old/
     echo "Creating symlink to $dotfile in home directory."
-    ln -s $dir/$dotfile ~/.$dotfile
+    ln -s -f $dotfilesdir/$dotfile ~/.$dotfile
 done
 
 # change to the vimfiles directory
 echo -n "Changing to the $vimdircol directory ..."
-cd $vimdircol
+cd $vimcoldir
 echo "done"
 
-# move any existing vimfiles in ~/.vim folder to ~/dotfiles_old/.vim directory, then create symlinks from ~/.vim to any files in the ~/dotfiles/.vim directory, specified in $vimfiles
+# Create symlinks from ~/.vim/colors directory to files in the dotfiles/.vim/colors directory, specified from $vimfiles variable
 for vimfile in $vimfiles; do
-    echo "Moving any existing vim color config files from ~/.vim/colors to $oldvimcoldir"
-    mv ~/.vim/colors/$vimfile $oldvimcoldir
-    echo "Creating symlink to $vimfile in home directory"
-    ln -s $dir/.vim/colors/$vimfile $vimdircol
+    echo "Creating symlink to $vimfile in ~/.vim/colors directory"
+    ln -s -f $dotfilesdir/.vim/colors/$vimfile $vimcoldir
 done
+
+
+
+
+
+
+
