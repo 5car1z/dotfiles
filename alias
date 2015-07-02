@@ -11,6 +11,7 @@ alias dt="cd ~/Desktop"
 alias h="history"
 alias j="jobs"
 alias dfs="cd ~/dotfiles"
+alias please='sudo $(history -p !!)'
 
 # List 'ls'.
 alias l="ls -lF ${colorflag}"
