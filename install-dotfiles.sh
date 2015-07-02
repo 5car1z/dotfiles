@@ -13,6 +13,7 @@ cheatsheetdir=~/.cheat                                                    # chea
                                  					  
 dotfiles="bashrc bash_profile inputrc functions alias env vimrc"          # list of files to symlink to home directory
 vimfiles="desertink.vim molokai_dark.vim molokai.vim"                     # list of vim configuration files to symlink to home directory
+cheatsheets="ping"
 
 ##########
 
@@ -38,9 +39,9 @@ for vimfile in $vimfiles; do
     ln -s -f $dotfilesdir/.vim/colors/$vimfile $vimcoldir
 done
 
-
-
-
-
-
+# Create symlinks from ~/.vim/colors directory to files in the dotfiles/.vim/colors directory, specified from $vimfiles variable
+for cheatsheet in $cheatsheets; do
+    echo "Creating symlink to $cheatsheet in ~/.cheat directory"
+    ln -s -f $dotfilesdir/.cheat/$cheatsheet $cheatsheetdir
+done
 
