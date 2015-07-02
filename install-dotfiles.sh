@@ -9,7 +9,7 @@
 dotfilesdir=~/dotfiles                   	                          # dotfiles directory
 
 vimcoldir=~/.vim/colors                                                   # vim color schemes directory
-cheatsheetdir="~/.cheat"
+cheatsheetdir=~/.cheat                                                    # cheat sheet storage directory
                                  					  
 dotfiles="bashrc bash_profile inputrc functions alias env vimrc"          # list of files to symlink to home directory
 vimfiles="desertink.vim molokai_dark.vim molokai.vim"                     # list of vim configuration files to symlink to home directory
@@ -21,14 +21,9 @@ echo -n "Creating vim colors configuration folder in ~ ..."
 mkdir -p $vimcoldir
 echo "done"
 
-# create .cheat configuration folder in home directory
+# create .cheat storage folder in home directory
 echo -n "Creating cheat storage folder in ~ ..."
 mkdir -p $cheatsheetdir
-echo "done"
-
-# change to the dotfiles directory
-echo -n "Changing to the $dotfilesdir directory ..."
-cd $dotfilesdir
 echo "done"
 
 # Create symlinks from ~ to any files in the ~/dotfiles directory specified from the $dotfiles variable
@@ -36,11 +31,6 @@ for dotfile in $dotfiles; do
     echo "Creating symlink to $dotfile in home directory."
     ln -s -f $dotfilesdir/$dotfile ~/.$dotfile
 done
-
-# change to the vimfiles directory
-echo -n "Changing to the $vimdircol directory ..."
-cd $vimcoldir
-echo "done"
 
 # Create symlinks from ~/.vim/colors directory to files in the dotfiles/.vim/colors directory, specified from $vimfiles variable
 for vimfile in $vimfiles; do
