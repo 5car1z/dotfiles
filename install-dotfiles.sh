@@ -18,8 +18,19 @@ cheatsheets="ping"
 ##########
 
 # create .vim configuration folder in home directory
-echo -n "Creating vim colors configuration folder in ~ ..."
+echo -n "Creating vim colors configuration folder in ~/.vim ..."
 mkdir -p $vimcoldir
+echo "done"
+
+# Install Pathogen vim addon manager
+echo -n "Downloading & installing Pathogen in ~/.vim ..."
+mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+echo "done"
+
+#Install Vim plugins
+echo -n "Downloading & installing Vim plugins in ~/.vim ..."
+git clone git://github.com/plasticboy/vim-markdown.git ~/.vim/bundle	# installing vim-markdown plugin. 
 echo "done"
 
 # create .cheat storage folder in home directory
