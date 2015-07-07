@@ -30,7 +30,8 @@ echo "done"
 
 # install Vim plugins
 echo -n "Downloading & installing Vim plugins in ~/.vim ..."
-git clone git://github.com/plasticboy/vim-markdown.git ~/.vim/bundle/vim-markdown	# installing vim-markdown plugin. 
+git clone https://github.com/plasticboy/vim-markdown.git ~/.vim/bundlse/vim-markdown	# installing vim-markdown plugin. 
+git clone https://github.com/ervandew/supertab.git ~/.vim/bundle/supertab               # installing SuperTab autocomplete plugin
 echo "done"
 
 # create .cheat storage folder in home directory
