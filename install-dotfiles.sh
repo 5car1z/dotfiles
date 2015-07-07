@@ -22,15 +22,15 @@ echo -n "Creating vim colors configuration folder in ~/.vim ..."
 mkdir -p $vimcoldir
 echo "done"
 
-# Install Pathogen vim addon manager
+# install Pathogen Vim addon manager
 echo -n "Downloading & installing Pathogen in ~/.vim ..."
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 echo "done"
 
-#Install Vim plugins
+# install Vim plugins
 echo -n "Downloading & installing Vim plugins in ~/.vim ..."
-git clone git://github.com/plasticboy/vim-markdown.git ~/.vim/bundle	# installing vim-markdown plugin. 
+git clone git://github.com/plasticboy/vim-markdown.git ~/.vim/bundle/vim-markdown	# installing vim-markdown plugin. 
 echo "done"
 
 # create .cheat storage folder in home directory
@@ -38,19 +38,19 @@ echo -n "Creating cheat storage folder in ~ ..."
 mkdir -p $cheatsheetdir
 echo "done"
 
-# Create symlinks from ~ to any files in the ~/dotfiles directory specified from the $dotfiles variable
+# create symlinks from ~ to any files in the ~/dotfiles directory specified from the $dotfiles variable
 for dotfile in $dotfiles; do
     echo "Creating symlink to $dotfile in home directory."
     ln -s -f $dotfilesdir/$dotfile ~/.$dotfile
 done
 
-# Create symlinks from ~/.vim/colors directory to files in the dotfiles/.vim/colors directory, specified from $vimfiles variable
+# create symlinks from ~/.vim/colors directory to files in the dotfiles/.vim/colors directory, specified from $vimfiles variable
 for vimfile in $vimfiles; do
     echo "Creating symlink to $vimfile in ~/.vim/colors directory"
     ln -s -f $dotfilesdir/.vim/colors/$vimfile $vimcoldir
 done
 
-# Create symlinks from ~/.vim/colors directory to files in the dotfiles/.vim/colors directory, specified from $vimfiles variable
+# create symlinks from ~/.vim/colors directory to files in the dotfiles/.vim/colors directory, specified from $vimfiles variable
 for cheatsheet in $cheatsheets; do
     echo "Creating symlink to $cheatsheet in ~/.cheat directory"
     ln -s -f $dotfilesdir/.cheat/$cheatsheet $cheatsheetdir
