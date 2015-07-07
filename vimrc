@@ -2,6 +2,9 @@
 
 execute pathogen#infect() 	
 
+filetype plugin on              "Enables plugins to be enabled based on file types.  
+filetype indent on              "Enables indentation based on file types. 
+
 set nocompatible		"Turns off vi compatibility allowing all features of vim to be enabled. 
 set history=500 		"Increases amount of commands stored in :cmdline history to 500.
 set showmode            	"Show current mode at the bottom of the screen.  
