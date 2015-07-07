@@ -1,8 +1,12 @@
-"1 -- General
+"1 -- Plugins
 
 execute pathogen#infect() 	
 
-filetype plugin on              "Enables plugins to be enabled based on file types.  
+let g:vim_markdown_folding_disabled=1	"Disables the folding feature in in vim-markdown plugin.
+
+"2 -- General
+
+filetype plugin on              "Allows plugins to be enabled based on file types.  
 filetype indent on              "Enables indentation based on file types. 
 
 set nocompatible		"Turns off vi compatibility allowing all features of vim to be enabled. 
