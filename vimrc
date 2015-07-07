@@ -1,8 +1,10 @@
 "1 -- General
 
-set nocompatible	"Turns off vi compatibility allowing all features of vim to be enabled. 
-set history=500 	"Increases amount of commands stored in :cmdline history to 500.
-set showmode            "Show current mode at the bottom of the screen.  
+execute pathogen#infect() 	
+
+set nocompatible		"Turns off vi compatibility allowing all features of vim to be enabled. 
+set history=500 		"Increases amount of commands stored in :cmdline history to 500.
+set showmode            	"Show current mode at the bottom of the screen.  
 
 "2 -- Themes & Colours
 
