@@ -27,7 +27,7 @@ set wildmenu    	"Enables auto-completion options to be dsiplayed in a horizonta
 set hlsearch    	"Highlights search results.
 
 set laststatus=2        "Always show the status line.
-set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ Type:\ %y\ CWD:\ %r%{getcwd()}%h\ \ Line:\ %l
+set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ Type:\ %y\ CWD:\ %r%{getcwd()}%h\ \ Line:\ %l/%L\ 
 
 "4 -- Formatting & Layout
 
