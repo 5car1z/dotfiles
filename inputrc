@@ -6,3 +6,7 @@ set completion-query-items 200
 
 # Show extra file information when completing, like `ls -F` does
 set visible-stats on
+
+# This allows you to search through your history using the up and down arrows with commands e.g. "cd" and press the up arrow and you'll search through everything in your history that starts with "cd".
+"\e[A": history-search-backward
+"\e[B": history-search-forward
