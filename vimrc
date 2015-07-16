@@ -4,6 +4,12 @@ execute pathogen#infect()
 
 let g:vim_markdown_folding_disabled=1	"Disables the folding feature in in vim-markdown plugin.
 
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let NERDTreeDirArrows = 0
+
 "2 -- General
 
 filetype plugin on              "Allows plugins to be enabled based on file types.  
@@ -27,7 +33,12 @@ set wildmenu    	"Enables auto-completion options to be dsiplayed in a horizonta
 set hlsearch    	"Highlights search results.
 
 set laststatus=2        "Always show the status line.
+
 set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ Type:\ %y\ CWD:\ %r%{getcwd()}%h\ \ Line:\ %l/%L\ 
+
+set statusline+=\ %=%#warningmsg#
+set statusline+=\ %=%{SyntasticStatuslineFlag()}
+set statusline+=\ %=%*
 
 "4 -- Formatting & Layout
 
