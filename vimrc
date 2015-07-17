@@ -56,7 +56,7 @@ autocmd BufReadPost *						"Return to last edited position when opening files.
 
 function! HasPaste()		"Returns true if paste mode is enabled. 
     if &paste
-        return 'PASTE MODE  '
+        return 'PASTE MODE'
     en
-    return ''
+    return 
 endfunction
