@@ -22,7 +22,7 @@ set showmode            	"Show current mode at the bottom of the screen.
 "2 -- Themes & Colours
 
 set t_Co=256		"Enables 256-color mode. 
-colorscheme desertink
+colorscheme desertink   "Enables the Desert Ink colour scheme.
 syntax enable   	"Enables syntax highlighting.
 
 "3 -- UI
