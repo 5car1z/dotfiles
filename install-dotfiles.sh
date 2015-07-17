@@ -37,6 +37,7 @@ git clone https://github.com/scrooloose/syntastic.git ~/.vim/bundle/syntastic   
 git clone https://github.com/tpope/vim-fugitive.git ~/.vim/bundle/vim-fugitive          # installing fugitive-vim plugin. 
 git clone https://github.com/vim-latex/vim-latex ~/.vim/bundle/vim-latex                # installing vim-latex plugin. 
 git clone https://github.com/junegunn/limelight.vim.git ~/.vim/bundle/limelight.vim     # installing limelight.vim plugin.
+git clone https://github.com/junegunn/goyo.vim.git ~/.vim/bundle/goyo.vim               # installing goyo.vim plugin. 
 echo "done"
 
 # create .cheat storage folder in home directory
