@@ -13,7 +13,7 @@ bash ~/.fehbg &                                                 #Sets the wallpa
 
 setxkbmap gb 							#Sets the keyboard to a Great Britain layout. 
  
-compton &                                                       #Sets Compositing Manager running.  
+compton -b                                                      #Sets Compositing Manager running.  
 
 exec sxhkd &                                                    #Runs the hotkey daemon for bspwm. 
 exec bspwm                                                      #Runs bspwm window manager. 
