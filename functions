@@ -2,3 +2,13 @@
 function mkd() {
   mkdir -p "$@" && cd "$@"
 }
+
+# Update, upgrade, write to log and clean up.
+
+updatesystem () {
+  sudo apt-get update
+  sudo apt-get -y upgrade
+  installdate=$(date +"%Y-%m-%d")
+  echo -e "$installdate Installed package $1" >> ~/system-changelog.txt
+  sudo apt-get autoremove
+  }
