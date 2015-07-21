@@ -12,8 +12,6 @@ alias h="history"
 alias j="jobs"
 alias dfs="cd ~/dotfiles"
 alias please='sudo $(history -p !!)'
-alias update="updatesystem"
-
 
 # List 'ls'.
 alias l="ls -lF ${colorflag}"
