@@ -79,7 +79,7 @@ unset color_prompt force_color_prompt
 # If this is an xterm set the title to user@host:dir & the cursor to a blinking underscore. 
 case "$TERM" in
 xterm*|rxvt*)
-    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1" # sets the title.
+    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1\[\e[m\]\[\e[1;37m\]" # sets the prompt title.
     ;;
 esac
 
