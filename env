@@ -1,5 +1,9 @@
 # Make vim the default editor.
 export EDITOR='vim';
 
+# Set Go path and add it to system path.
+export GOPATH=$HOME/gopath
+export PATH=$GOPATH:$GOPATH/bin:$PATH
+
 # Highlight section titles in manual pages.
 export LESS_TERMCAP_md="${yellow}";
