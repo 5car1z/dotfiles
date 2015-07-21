@@ -1,10 +1,9 @@
 # Create a new directory and enter it.
 function mkd() {
   mkdir -p "$@" && cd "$@"
-}
+  }
 
 # Update, upgrade, write to log and clean up.
-
 updatesystem () {
   sudo apt-get update
   sudo apt-get -y upgrade
