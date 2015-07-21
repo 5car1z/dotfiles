@@ -11,3 +11,14 @@ updatesystem () {
   echo -e "$installdate Installed package $1" >> ~/system-changelog.txt
   sudo apt-get autoremove
   }
+
+# Lists processes matching given name:
+psgrep() {
+ if [ ! -z $1 ]; then
+  echo "Processes matching $1:"
+  ps aux | grep $1 | grep -v grep
+ else
+  echo "What process are you looking for?"
+ fi
+ }
+
