@@ -45,14 +45,6 @@ case "$TERM" in
     xterm-color) color_prompt=yes;;
 esac
 
-term_emulator="$(ps -p $PPID | awk '{print $4}' | sed '/CMD/d')"
-
-case $term_emulator in
-xterm) 
-    echo -e -n "\x1b[\x33 q" # changes cursor to a blinking underscore. 
-    ;;
-esac
-
 # uncomment for a colored prompt, if the terminal has the capability; turned
 # off by default to not distract the user: the focus in a terminal window
 # should be on the output of commands, not on the prompt
@@ -76,10 +68,12 @@ else
 fi
 unset color_prompt force_color_prompt
 
-# If this is an xterm set the title to user@host:dir & the cursor to a blinking underscore. 
-case "$TERM" in
-xterm*|rxvt*)
-    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1\[\e[m\]\[\e[1;37m\]" # sets the prompt title.
+term_emulator="$(ps -p $PPID | awk '{print $4}' | sed '/CMD/d')" # stores the name of the terminal emulator program in use for ther session. 
+
+case $term_emulator in
+xterm) 
+    echo -e -n "\x1b[\x33 q" # changes cursor to a blinking underscore. 
+    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1\[\e[m\]\[\e[1;37m\]" # sets the prompt and turns entered text on the command line to white. 
     ;;
 esac
 
