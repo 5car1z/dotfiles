@@ -20,7 +20,7 @@ alias la='ls -A'
 alias lc='ls -CF'
 
 # Player 'mpv'
-alias otto-baroque="mpv --volume=10 http://yp.shoutcast.com/sbin/tunein-station.pls?id=435993"
+alias mpv-otto-baroque="mpv --volume=10 http://yp.shoutcast.com/sbin/tunein-station.pls?id=435993"
 
 # Networking
 alias fastping="ping -c 20 -s.2"
