@@ -2,7 +2,7 @@
 
 execute pathogen#infect() 	
 
-let g:vim_markdown_folding_disabled=1	"Disables the folding feature in in vim-markdown plugin.
+let g:vim_markdown_folding_disabled = 1	"Disables the folding feature in in vim-markdown plugin.
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
@@ -12,7 +12,9 @@ let g:syntastic_check_on_wq = 0
 let NERDTreeDirArrows = 0
 
 let g:startify_custom_header = 
-			\ map(split(system('fortune | cowthink '), '\n'), '"   ". v:val') + ['','']
+			\ map(split(system('fortune -s | cowthink'), '\n'), '"   ". v:val') + ['','']
+let g:startify_custom_footer =
+                        \ [''] + map(split(system('date -R'), '\n'), '"   ". v:val') + [''] + map(split(system('lsb_release -a | tail -n 3'), '\n'), '"   ". v:val') + ['']
 
 "2 -- General
 
