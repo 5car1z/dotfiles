@@ -40,7 +40,8 @@ git clone https://github.com/junegunn/limelight.vim.git ~/.vim/bundle/limelight.
 git clone https://github.com/junegunn/goyo.vim.git ~/.vim/bundle/goyo.vim               # installing goyo.vim plugin. 
 git clone https://github.com/mhinz/vim-startify.git ~/.vim/bundle/vim-startify          # installing vim-startify plugin.
 git clone https://github.com/tpope/vim-eunuch.git ~/.vim/bundle/vim-eunuch              # installing vim-eunuch plugin.
-
+git clone https://github.com/reedes/vim-wordy.git ~/.vim/bundle/vim-wordy               # installing vim-wordy plugin.
+git clone https://github.com/mattn/gist-vim.git ~/.vim/bundle/gist-vim.git              # installing gist-vim.git.
 echo "done"
 
 # create .cheat storage folder in home directory
