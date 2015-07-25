@@ -1,10 +1,10 @@
 # Create a new directory and enter it.
-function mkd() {
+mkd() {
   mkdir -p "$@" && cd "$@"
   }
 
 # Update, upgrade, write to log and clean up.
-updatesystem () {
+update_system () {
   sudo apt-get update
   sudo apt-get -y upgrade
   installdate=$(date +"%Y-%m-%d")
@@ -34,6 +34,6 @@ man() {
     man "$@"
     }
 
-mpv-twitch () { 
+mpv_twitch () { 
     mpv --ytdl "https://twitch.tv/$1"; 
     }
