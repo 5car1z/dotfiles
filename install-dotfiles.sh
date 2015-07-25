@@ -38,7 +38,9 @@ git clone https://github.com/tpope/vim-fugitive.git ~/.vim/bundle/vim-fugitive  
 git clone https://github.com/vim-latex/vim-latex ~/.vim/bundle/vim-latex                # installing vim-latex plugin. 
 git clone https://github.com/junegunn/limelight.vim.git ~/.vim/bundle/limelight.vim     # installing limelight.vim plugin.
 git clone https://github.com/junegunn/goyo.vim.git ~/.vim/bundle/goyo.vim               # installing goyo.vim plugin. 
-git clone https://github.com/mhinz/vim-startify.git ~/.vim/bundle/vim-startify          # isntalling vim-startify plugin.
+git clone https://github.com/mhinz/vim-startify.git ~/.vim/bundle/vim-startify          # installing vim-startify plugin.
+git clone https://github.com/tpope/vim-eunuch.git ~/.vim/bundle/vim-eunuch              # installing vim-eunuch plugin.
+
 echo "done"
 
 # create .cheat storage folder in home directory
