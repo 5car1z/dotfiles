@@ -12,9 +12,12 @@ let g:syntastic_check_on_wq = 0
 let NERDTreeDirArrows = 0
 
 let g:startify_custom_header = 
-			\ map(split(system('fortune -s | cowthink'), '\n'), '"   ". v:val') + ['','']
+			\ map(split(system('fortune -s | cowthink'), '\n'), '"   ". v:val') + ['',''] 			"Displays a cowsay message with fortune in vim-startify.
 let g:startify_custom_footer =
-                        \ [''] + map(split(system('date -R'), '\n'), '"   ". v:val') + [''] + map(split(system('lsb_release -a | tail -n 3'), '\n'), '"   ". v:val') + ['']
+                        \ [''] + map(split(system('date -R'), '\n'), '"   ". v:val') + [''] + map(split(system('lsb_release -a | tail -n 3'), '\n'), '"   ". v:val') + ['']    "Displays the OS release name and version in vim-startify. 
+
+let g:startify_bookmarks = [ '/etc/apache2/apache2.conf'] 			"Hard-coded vim-startify bookmarks. 
+let g:startify_session_delete_buffers = 1                                       "Deletes any session file buffers when a session is loaded. 
 
 "2 -- General
 
