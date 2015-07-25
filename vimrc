@@ -8,7 +8,11 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
 let NERDTreeDirArrows = 0
+
+let g:startify_custom_header = 
+			\ map(split(system('fortune | cowthink '), '\n'), '"   ". v:val') + ['','']
 
 "2 -- General
 
