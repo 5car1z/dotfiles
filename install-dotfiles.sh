@@ -17,6 +17,11 @@ cheatsheets="ping"
 
 ##########
 
+#Dependencies
+#1. Curl
+#2. Git
+#3 Cheat
+
 # create .vim configuration folder in home directory
 echo -n "Creating vim colors configuration folder in ~/.vim ..."
 mkdir -p $vimcoldir
