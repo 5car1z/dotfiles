@@ -1,5 +1,7 @@
 #!/bin/bash
 
+exec nvidia-settings --load-config-only &
+
 xset s off &							#Turns the X screensaver off. 
 xset -dpms &							#Disables energy saving features.
 xset +fp /usr/share/fonts/local			         	#Sets the font path directory.
