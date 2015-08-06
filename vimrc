@@ -2,7 +2,7 @@
 
 execute pathogen#infect() 	
 
-let g:vim_markdown_folding_disabled = 1	"Disables the folding feature in in vim-markdown plugin.
+"let g:vim_markdown_folding_disabled = 1	"Disables the folding feature in in vim-markdown plugin.
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
@@ -28,13 +28,13 @@ set nocompatible		"Turns off vi compatibility allowing all features of vim to be
 set history=500 		"Increases amount of commands stored in :cmdline history to 500.
 set showmode            	"Show current mode at the bottom of the screen.  
 
-"2 -- Themes & Colours
+"3 -- Themes & Colours
 
 set t_Co=256		"Enables 256-color mode. 
 colorscheme desertink   "Enables the Desert Ink colour scheme.
 syntax enable   	"Enables syntax highlighting.
 
-"3 -- UI
+"4 -- UI
 
 set number		"Enables line numbers. 
 set ignorecase  	"Makes searches case-insensitive. 
@@ -49,19 +49,23 @@ set statusline+=\ %=%#warningmsg#
 set statusline+=\ %=%{SyntasticStatuslineFlag()}
 set statusline+=\ %=%*
 
-"4 -- Formatting & Layout
+"5 -- Formatting & Layout
 
 set nowrap		"Disables text wrapping
 set ffs=unix,dos,mac    "Use Unix as the standard file type.
 
-"5 -- Misc.
+"6 -- Remapping & Keybindings
+
+nnoremap <Space> za 	 
+
+"7 -- Misc.
 
 autocmd BufReadPost *						"Return to last edited position when opening files.
      \ if line("'\"") > 0 && line("'\"") <= line("$") |
      \   exe "normal! g`\"" |
      \ endif 
 
-"6 -- Helper Functions
+"8 -- Helper Functions
 
 function! HasPaste()		"Returns true if paste mode is enabled. 
     if &paste
