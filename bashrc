@@ -2,6 +2,10 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+# Source the git completion file into the shell, must be sourced before the alias file is called as this is where bash git aliases are stored and recognised. 
+. ~/.git-completion.bash
+
+# Source regular bash shell configuration files. 
 . ~/.inputrc
 . ~/.alias
 . ~/.functions

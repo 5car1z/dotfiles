@@ -11,8 +11,8 @@ dotfilesdir=~/dotfiles                   	                          # dotfiles d
 vimcoldir=~/.vim/colors                                                   # vim color schemes directory
 cheatsheetdir=~/.cheat                                                    # cheat sheet storage directory
                                  					  
-dotfiles="bashrc bash_profile inputrc functions alias env vimrc gitconfig"          # list of files to symlink to home directory
-vimfiles="desertink.vim molokai_dark.vim molokai.vim"                               # list of vim configuration files to symlink to home directory
+dotfiles="bashrc bash_profile inputrc functions alias env vimrc gitconfig git-completion.bash"          # list of files to symlink to home directory
+vimfiles="desertink.vim molokai_dark.vim molokai.vim"                                                   # list of vim configuration files to symlink to home directory
 cheatsheets="ping"
 
 ##########

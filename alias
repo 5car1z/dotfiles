@@ -20,21 +20,55 @@ alias la='ls -A'
 alias lc='ls -CF'
 
 # Player 'mpv'
-alias mpv-otto-baroque="mpv --volume=10 http://yp.shoutcast.com/sbin/tunein-station.pls?id=435993"
+alias mpv-otto-baroque="mpv --volume=30 http://yp.shoutcast.com/sbin/tunein-station.pls?id=435993"
 
 # Networking
 alias fastping="ping -c 20 -s.2"
 
 # Colours
-# enable color support of ls and also add handy aliases
+
+# Enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
-
+    alias dir='dir --color=auto'
+    alias vdir='vdir --color=auto'
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
 fi
+
+# Git Aliases
+alias g="git"
+alias gco="git checkout"
+alias gm="git merge"
+alias gpl="git pull"
+alias gst="git status"
+alias ga='git add'
+alias gb='git branch'
+alias gc='git commit -m'
+alias gd='git diff'
+alias gps='git push'
+alias gl='git log'
+alias gcl='git clone'
+alias gsw='git show'
+alias glw='git shortlog -s --'
+alias glt="git log --date=local"
+alias glp="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+alias gup="git pull --rebase --prune $@ && git submodule update --init --recursive"
+alias gac="git add . && git commit -am"
+
+# Add git completion to aliases
+ __git_complete g __git_main
+ __git_complete gco _git_checkout
+ __git_complete gm _git_merge
+ __git_complete gpl _git_pull
+ __git_complete ga _git_add
+ __git_complete gb _git_branch
+ __git_complete gc _git_commit
+ __git_complete gd _git_diff
+ __git_complete gps _git_push
+ __git_complete gl _git_log
+ __git_complete gcl _git_clone
+ __git_complete gsw _git_show
 
