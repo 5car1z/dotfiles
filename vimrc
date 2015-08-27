@@ -2,7 +2,7 @@
 
 execute pathogen#infect() 	
 
-let g:vim_markdown_folding_disabled = 1	"Disables the folding feature in in vim-markdown plugin.
+"let g:vim_markdown_folding_disabled = 1	"Disables the folding feature in in vim-markdown plugin.
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
