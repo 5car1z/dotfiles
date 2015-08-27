@@ -2,7 +2,7 @@
 
 execute pathogen#infect() 	
 
-"let g:vim_markdown_folding_disabled = 1	"Disables the folding feature in in vim-markdown plugin.
+let g:vim_markdown_folding_disabled = 1	"Disables the folding feature in in vim-markdown plugin.
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
@@ -16,7 +16,7 @@ let g:startify_custom_header =
 let g:startify_custom_footer =
                         \ [''] + map(split(system('date -R'), '\n'), '"   ". v:val') + [''] + map(split(system('lsb_release -a | tail -n 3'), '\n'), '"   ". v:val') + ['']    "Displays the OS release name and version in vim-startify. 
 
-let g:startify_bookmarks = [ '/etc/apache2/apache2.conf'] 			"Hard-coded vim-startify bookmarks. 
+let g:startify_bookmarks = ['/etc/apache2/apache2.conf'] 			"Hard-coded vim-startify bookmarks. 
 let g:startify_session_delete_buffers = 1                                       "Deletes any session file buffers when a session is loaded. 
 
 "2 -- General
@@ -56,7 +56,8 @@ set ffs=unix,dos,mac    "Use Unix as the standard file type.
 
 "6 -- Remapping & Keybindings
 
-nnoremap <Space> za 	 
+"Spacebar can now be used to open/close a folded section with this binding.
+nnoremap <Space> za     	 
 
 "7 -- Misc.
 
