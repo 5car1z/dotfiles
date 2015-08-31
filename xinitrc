@@ -16,7 +16,7 @@ bash ~/.fehbg &                                                 #Sets the wallpa
 setxkbmap gb 							#Sets the keyboard to a Great Britain layout. 
  
 compton -b                                                      #Sets Compositing Manager running.  
-jackd -R -d alsa -d hw:1 &                                      #Starts jack running for multiple audio sources. 
+jackd -R -d alsa -d hw:0 &                                      #Starts jack running for multiple audio sources. 
 
 exec sxhkd &                                                    #Runs the hotkey daemon for bspwm. 
 exec bspwm                                                      #Runs bspwm window manager. 
