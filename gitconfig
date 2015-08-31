@@ -5,3 +5,7 @@
 	default = simple
 [github]
 	user = 5car1z
+[core]
+	editor = vim
+[credential]
+	helper = cache
