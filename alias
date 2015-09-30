@@ -21,6 +21,7 @@ alias lc='ls -CF'
 
 # Player 'mpv'
 alias mpv-otto-baroque="mpv --volume=30 http://yp.shoutcast.com/sbin/tunein-station.pls?id=435993"
+alias mpv-otto-classical="mpv --volume=30 http://yp.shoutcast.com/sbin/tunein-station.pls?id=332595"
 
 # Networking
 alias fastping="ping -c 20 -s.2"
