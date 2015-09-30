@@ -5,6 +5,10 @@
 # Source the git completion file into the shell, must be sourced before the alias file is called as this is where bash git aliases are stored and recognised. 
 . ~/.git-completion.bash
 
+# Export and source git-aware-prompt variable.
+export GITAWAREPROMPT=~/.git-aware-prompt
+. "${GITAWAREPROMPT}/main.sh"
+
 # Source regular bash shell configuration files. 
 . ~/.inputrc
 . ~/.alias
@@ -66,9 +70,9 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    PS1="${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
 else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+    PS1="${debian_chroot:+($debian_chroot)}\u@\h:\w\[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
 fi
 unset color_prompt force_color_prompt
 

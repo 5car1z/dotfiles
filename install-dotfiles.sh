@@ -10,7 +10,8 @@ dotfilesdir=~/dotfiles                   	                          # dotfiles d
 
 vimcoldir=~/.vim/colors                                                   # vim color schemes directory
 cheatsheetdir=~/.cheat                                                    # cheat sheet storage directory
-                                 					  
+gitawareprompt=~/.git-aware-prompt 					  # git aware prompt directory. 
+
 dotfiles="bashrc bash_profile inputrc functions alias env vimrc gitconfig git-completion.bash"          # list of files to symlink to home directory
 vimfiles="desertink.vim molokai_dark.vim molokai.vim"                                                   # list of vim configuration files to symlink to home directory
 cheatsheets="ping"
@@ -50,10 +51,14 @@ git clone https://github.com/mattn/gist-vim.git ~/.vim/bundle/gist-vim          
 git clone https://github.com/mattn/webapi-vim.git ~/.vim/bundle/webapi-vim              # installing webapi-vim plugin (required for gist-vim). 
 echo "done"
 
-# create .cheat storage folder in home directory
-echo -n "Creating cheat storage folder in ~ ..."
-mkdir -p $cheatsheetdir
+# create .cheat and .git-aware-prompt storage folder in home directory
+echo -n "Creating cheat and git-aware-prompt storage folder in ~ ..."
+mkdir -p $cheatsheetdir $gitawareprompt
 echo "done"
+
+echo -n "Installing Git Aware Prompt in ~/.git-aware-prompt ..."
+git clone https://github.com/jimeh/git-aware-prompt.git ~/.git-aware-prompt
+echo -n "done"
 
 # create symlinks from ~ to any files in the ~/dotfiles directory specified from the $dotfiles variable
 for dotfile in $dotfiles; do
