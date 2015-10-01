@@ -26,6 +26,7 @@ filetype indent on              "Enables indentation based on file types.
 
 set nocompatible		"Turns off vi compatibility allowing all features of vim to be enabled. 
 set history=500 		"Increases amount of commands stored in :cmdline history to 500.
+set undolevels=500              "Remember much more undo levels. 
 set showmode            	"Show current mode at the bottom of the screen.  
 
 "3 -- Themes & Colours
@@ -51,13 +52,23 @@ set statusline+=\ %=%*
 
 "5 -- Formatting & Layout
 
-set nowrap		"Disables text wrapping
-set ffs=unix,dos,mac    "Use Unix as the standard file type.
+set nowrap			"Disables text wrapping
+set ffs=unix,dos,mac            "Use Unix as the standard file type.
+set spell spelllang=en_gb        "Enable English - Great Britain spell checking.
 
 "6 -- Remapping & Keybindings
 
+"Allows turning spell checking on and off with leader then s key. 
+nmap <silent> <leader>s :set spell!<CR>
+
 "Spacebar can now be used to open/close a folded section with this binding.
 nnoremap <Space> za     	 
+
+"These next four lines disable the arrow keys. 
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
 
 "7 -- Misc.
 
