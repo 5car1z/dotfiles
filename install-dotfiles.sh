@@ -10,9 +10,8 @@ dotfilesdir=~/dotfiles                   	                          # dotfiles d
 
 vimcoldir=~/.vim/colors                                                   # vim color schemes directory
 cheatsheetdir=~/.cheat                                                    # cheat sheet storage directory
-gitawareprompt=~/.git-aware-prompt 					  # git aware prompt directory. 
 
-dotfiles="bashrc bash_profile inputrc functions alias env vimrc gitconfig git-completion.bash"          # list of files to symlink to home directory
+dotfiles="bashrc bash_profile inputrc functions alias env vimrc gitconfig git-completion.bash zshrc"          # list of files to symlink to home directory
 vimfiles="desertink.vim molokai_dark.vim molokai.vim"                                                   # list of vim configuration files to symlink to home directory
 cheatsheets="ping"
 
@@ -53,7 +52,7 @@ echo "done"
 
 # create .cheat and .git-aware-prompt storage folder in home directory
 echo -n "Creating cheat and git-aware-prompt storage folder in ~ ..."
-mkdir -p $cheatsheetdir $gitawareprompt
+mkdir -p $cheatsheetdir 
 echo "done"
 
 echo -n "Installing Git Aware Prompt in ~/.git-aware-prompt ..."
