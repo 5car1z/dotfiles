@@ -54,7 +54,7 @@ set statusline+=\ %=%*
 
 set nowrap			"Disables text wrapping
 set ffs=unix,dos,mac            "Use Unix as the standard file type.
-set spell spelllang=en_gb        "Enable English - Great Britain spell checking.
+set spelllang=en_gb             "Enable English - Great British spell checking.
 
 "6 -- Remapping & Keybindings
 
