@@ -40,7 +40,7 @@ mpv_twitch() {
 
 # Display a random Git tip using "git-tips" Git repo and jq -- https://stedolan.github.io/jq/
 random_git_tip() {
-  tips_index=( $(seq 0 $(jq "length" ~/git-tips/tips.json) | sort -R | head -1) )
-  jq -M ".[$tips_index] | .title, .tip" ~/git-tips/tips.json
+  tips_index=( $(seq 0 $(jq "length" ~/.git-tips/tips.json) | sort -R | head -1) )
+  jq -M ".[$tips_index] | .title, .tip" ~/.git-tips/tips.json
 }
 

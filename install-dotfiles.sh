@@ -18,9 +18,12 @@ cheatsheets="ping"
 ##########
 
 #Dependencies
-#1. Curl
-#2. Git
-#3. Cheat
+#1. curl 			| apt-get, pacman
+#2. Git  			| apt-get, pacman
+#3. Cheat                       | pip
+#4. Fortune                     | apt-get, pacman
+#5. Cowsay                      | apt-get, pacman
+#6. jq (JSON Parser)            | apt-get, pacman
 
 # create .vim configuration folder in home directory
 echo -n "Creating vim colors configuration folder in ~/.vim ..."
@@ -50,13 +53,14 @@ git clone https://github.com/mattn/gist-vim.git ~/.vim/bundle/gist-vim          
 git clone https://github.com/mattn/webapi-vim.git ~/.vim/bundle/webapi-vim              # installing webapi-vim plugin (required for gist-vim). 
 echo "done"
 
-# create .cheat and .git-aware-prompt storage folder in home directory
+# create .cheat storage folder in home directory
 echo -n "Creating cheat and git-aware-prompt storage folder in ~ ..."
 mkdir -p $cheatsheetdir 
 echo "done"
 
-echo -n "Installing Git Aware Prompt in ~/.git-aware-prompt ..."
-git clone https://github.com/jimeh/git-aware-prompt.git ~/.git-aware-prompt
+echo -n "Installing Git enhancements in ~/.*"
+git clone https://github.com/jimeh/git-aware-prompt.git ~/.git-aware-prompt             # installing git-aware-prompt -- branches in prompt. 
+git clone https://github.com/git-tips/tips.git ~/.git-tips 				# installing git-tips repo for random_git_tip function. 
 echo -n "done"
 
 # create symlinks from ~ to any files in the ~/dotfiles directory specified from the $dotfiles variable
