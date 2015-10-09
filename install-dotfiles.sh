@@ -28,13 +28,13 @@ cheatsheets="ping"
 # create .vim configuration folder in home directory
 echo -n "Creating vim colors configuration folder in ~/.vim ..."
 mkdir -p $vimcoldir
-echo "done"
+echo -n "done"
 
 # install Pathogen Vim addon manager
 echo -n "Downloading & installing Pathogen in ~/.vim ..."
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
-echo "done"
+echo -n "done"
 
 # install Vim plugins
 echo -n "Downloading & installing Vim plugins in ~/.vim ..."
@@ -51,12 +51,15 @@ git clone https://github.com/tpope/vim-eunuch.git ~/.vim/bundle/vim-eunuch      
 git clone https://github.com/reedes/vim-wordy.git ~/.vim/bundle/vim-wordy               # installing vim-wordy plugin.
 git clone https://github.com/mattn/gist-vim.git ~/.vim/bundle/gist-vim                  # installing gist-vim.git.
 git clone https://github.com/mattn/webapi-vim.git ~/.vim/bundle/webapi-vim              # installing webapi-vim plugin (required for gist-vim). 
-echo "done"
+echo -n "done"
 
-# create .cheat storage folder in home directory
-echo -n "Creating cheat and git-aware-prompt storage folder in ~ ..."
+# create .cheat storage folder in home directory and download Cheat bash completion then install it. 
+echo -n "Creating cheat storage folder in ~ ... "
 mkdir -p $cheatsheetdir 
-echo "done"
+echo -n "done"
+printf "Downloading Cheat bash completion script into /etc/bash_completion.d/cheat.bash - Password may be required if not root. \n"
+sudo wget -O /etc/bash_completion.d/cheat.bash https://raw.githubusercontent.com/chrisallenlane/cheat/master/cheat/autocompletion/cheat.bash 
+echo -n "done"
 
 echo -n "Installing Git enhancements in ~/.*"
 git clone https://github.com/jimeh/git-aware-prompt.git ~/.git-aware-prompt             # installing git-aware-prompt -- branches in prompt. 
