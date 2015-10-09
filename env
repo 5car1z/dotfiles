@@ -1,7 +1,10 @@
 # Make vim the default editor.
 export EDITOR='vim';
 
-# Set Go path and add it to system path.
+# Cheat environment variables.
+export CHEATCOLORS=true
+
+#Set Go path and add it to system path.
 export GOPATH=$HOME/gopath
 export PATH=$GOPATH:$GOPATH/bin:$PATH
 
