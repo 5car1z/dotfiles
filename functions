@@ -38,9 +38,47 @@ mpv_twitch() {
     mpv --ytdl "https://twitch.tv/$1"; 
     }
 
+
+# Git General Functions
+
 # Display a random Git tip using "git-tips" Git repo and jq -- https://stedolan.github.io/jq/
 random_git_tip() {
   tips_index=( $(seq 0 $(jq "length" ~/.git-tips/tips.json) | sort -R | head -1) )
   jq -M ".[$tips_index] | .title, .tip" ~/.git-tips/tips.json
 }
 
+# Git Alias Misc Functions
+
+# The current branch name
+# Usage example: git pull origin $(current_branch)
+# Using '--quiet' with 'symbolic-ref' will not cause a fatal error (128) if
+# it's not a symbolic ref, but in a Git repo.
+function current_branch() {
+  local ref
+  ref=$($_omz_git_git_cmd symbolic-ref --quiet HEAD 2> /dev/null)
+  local ret=$?
+  if [[ $ret != 0 ]]; then
+    [[ $ret == 128 ]] && return  # no git repo.
+    ref=$($_omz_git_git_cmd rev-parse --short HEAD 2> /dev/null) || return
+  fi
+  echo ${ref#refs/heads/}
+}
+# The list of remotes
+function current_repository() {
+  if ! $_omz_git_git_cmd rev-parse --is-inside-work-tree &> /dev/null; then
+    return
+  fi
+  echo $($_omz_git_git_cmd remote -v | cut -d':' -f 2)
+}
+# Pretty log messages
+function _git_log_prettily(){
+  if ! [ -z $1 ]; then
+    git log --pretty=$1
+  fi
+}
+# Warn if the current branch is a WIP
+function work_in_progress() {
+  if $(git log -n 1 2>/dev/null | grep -q -c "\-\-wip\-\-"); then
+    echo "WIP!!"
+  fi
+}
