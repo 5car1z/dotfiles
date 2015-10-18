@@ -26,13 +26,10 @@ $ sudo pip install cheat
 
 ---
 
-##Install
+##Cloning Repository
 
 ```bash
 $ cd ~ && git clone https://github.com/5car1z/dotfiles.git
 ```
 
 ---
-
-
-
