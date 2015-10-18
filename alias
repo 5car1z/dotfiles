@@ -90,15 +90,15 @@ function gdv() {
 #compdef _git gdv=git-diff
 
 alias gdw='git diff --word-diff'
-alias gf='git fetch'
-alias gfa='git fetch --all --prune'
+alias gf='git fetch && random_git_tip'
+alias gfa='git fetch --all --prune && random_git_tip'
 
 function gfg() { 
   git ls-files | grep $@ 
 }
 #compdef gfg=grep
 
-alias gfo='git fetch origin'
+alias gfo='git fetch origin && random_git_tip'
 
 alias gg='git gui citool'
 alias gga='git gui citool --amend'
@@ -165,7 +165,7 @@ alias gk='\gitk --all --branches'
 alias gke='\gitk --all $(git log -g --pretty=format:%h)'
 #compdef _git gke='gitk'
 
-alias gl='git pull'
+alias gl='git pull && random_git_tip'
 alias glg='git log --stat --color'
 alias glgp='git log --stat --color -p'
 alias glgg='git log --graph --color'
