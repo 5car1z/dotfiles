@@ -184,9 +184,9 @@ alias gmt='git mergetool --no-prompt'
 alias gmtvim='git mergetool --no-prompt --tool=vimdiff'
 alias gmum='git merge upstream/master'
 
-alias gp='git push'
+alias gp='git push && random_git_tip'
 alias gpd='git push --dry-run'
-alias gpoat='git push origin --all && git push origin --tags'
+alias gpoat='git push origin --all && git push origin --tags && random_git_tip'
 #compdef _git gpoat=git-push
 alias gpu='git push upstream'
 alias gpv='git push -v'
