@@ -45,6 +45,7 @@ mpv_twitch() {
 # Can add a -M option to the last line jq command of the function to disable the coloured output.
 random_git_tip() {
   tips_index=( $(seq 0 $(jq "length" ~/.git-tips/tips.json) | sort -R | head -1) )
+  echo "--------------------------------------------------------------"
   jq ".[$tips_index] | .title, .tip" ~/.git-tips/tips.json
 }
 
