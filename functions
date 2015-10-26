@@ -12,16 +12,6 @@ update_system() {
   sudo apt-get autoremove
   }
 
-# Lists processes matching given name:
-psgrep() {
- if [ ! -z $1 ]; then
-  echo "Processes matching $1:"
-  ps aux | grep $1 | grep -v grep
- else
-  echo "What process are you looking for?"
- fi
- }
-
 # Colored man pages (via less):
 man() {
     env LESS_TERMCAP_mb=$'\E[01;31m' \
