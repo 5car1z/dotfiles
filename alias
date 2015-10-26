@@ -32,6 +32,13 @@ alias mpv-otto-classical="mpv --volume=30 http://yp.shoutcast.com/sbin/tunein-st
 # Networking
 alias fastping="ping -c 20 -s.2"
 
+alias ipt='sudo iptables'
+ 
+alias iptlist='sudo /sbin/iptables -L -n -v --line-numbers'
+alias iptlistin='sudo /sbin/iptables -L INPUT -n -v --line-numbers'
+alias iptlistout='sudo /sbin/iptables -L OUTPUT -n -v --line-numbers'
+alias iptlistfw='sudo /sbin/iptables -L FORWARD -n -v --line-numbers'
+
 # Colours
 
 # Enable color support of ls and also add handy aliases
