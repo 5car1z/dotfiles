@@ -19,9 +19,11 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias lc='ls -CF'
 
-# Environment / System
-alias psgrep="ps aux | grep -v grep | grep -i -e VSZ -e"
+# Environment
 alias path='echo -e ${PATH//:/\\n}'
+
+# System
+alias psgrep="ps aux | grep -v grep | grep -i -e VSZ -e"
 
 # Player 'mpv'
 alias mpv-otto-baroque="mpv --volume=30 http://yp.shoutcast.com/sbin/tunein-station.pls?id=435993"
