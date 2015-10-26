@@ -19,7 +19,8 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias lc='ls -CF'
 
-# Environment
+# Environment / System
+alias psgrep="ps aux | grep -v grep | grep -i -e VSZ -e"
 alias path='echo -e ${PATH//:/\\n}'
 
 # Player 'mpv'
