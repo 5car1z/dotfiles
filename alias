@@ -19,6 +19,9 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias lc='ls -CF'
 
+# Environment
+alias path='echo -e ${PATH//:/\\n}'
+
 # Player 'mpv'
 alias mpv-otto-baroque="mpv --volume=30 http://yp.shoutcast.com/sbin/tunein-station.pls?id=435993"
 alias mpv-otto-classical="mpv --volume=30 http://yp.shoutcast.com/sbin/tunein-station.pls?id=332595"
