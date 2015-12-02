@@ -32,7 +32,8 @@ set showmode            	"Show current mode at the bottom of the screen.
 "3 -- Themes & Colours
 
 set t_Co=256		"Enables 256-color mode. 
-colorscheme desertink   "Enables the Desert Ink colour scheme.
+colorscheme onedark     "Enables One Dark Atom editor style colour scheme. 
+"colorscheme desertink  "Enables the Desert Ink colour scheme.
 syntax enable   	"Enables syntax highlighting.
 
 "4 -- UI
