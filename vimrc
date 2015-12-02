@@ -19,6 +19,9 @@ let g:startify_custom_footer =
 let g:startify_bookmarks = ['/etc/apache2/apache2.conf'] 			"Hard-coded vim-startify bookmarks. 
 let g:startify_session_delete_buffers = 1                                       "Deletes any session file buffers when a session is loaded. 
 
+let g:limelight_conceal_ctermfg = 'gray'
+let g:limelight_conceal_ctermfg = 240
+
 "2 -- General
 
 filetype plugin on              "Allows plugins to be enabled based on file types.  
