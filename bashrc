@@ -36,8 +36,7 @@ HISTFILESIZE=4000
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
-# If set, the pattern "**" used in a pathname expansion context will
-# match all files and zero or more directories and subdirectories.
+# If set, the pattern "**" used in a pathname expansion context will # match all files and zero or more directories and subdirectories.
 #shopt -s globstar
 
 # make less more friendly for non-text input files, see lesspipe(1)
@@ -74,6 +73,10 @@ if [ "$color_prompt" = yes ]; then
 else
     PS1="${debian_chroot:+($debian_chroot)}\u@\h:\w\[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
 fi
+
+# Append screen number to command prompt if running Screen
+if [ "$WINDOW" ]; then export PS1="\[$bldwht\](screen #$WINDOW)\[$txtrst\]--$PS1"; fi
+
 unset color_prompt force_color_prompt
 
 term_emulator="$(ps -p $PPID | awk '{print $4}' | sed '/CMD/d')" # stores the name of the terminal emulator program in use for ther session. 
