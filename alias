@@ -39,6 +39,9 @@ alias iptlistin='sudo /sbin/iptables -L INPUT -n -v --line-numbers'
 alias iptlistout='sudo /sbin/iptables -L OUTPUT -n -v --line-numbers'
 alias iptlistfw='sudo /sbin/iptables -L FORWARD -n -v --line-numbers'
 
+# Docker
+alias dps='docker ps'
+
 # Colours
 
 # Enable color support of ls and also add handy aliases
