@@ -2,8 +2,8 @@
 
 xset s off &							#Turns the X screensaver off. 
 xset -dpms &							#Disables energy saving features.
-xset +fp /usr/share/fonts/local			         	#Sets the font path directory.
-xset fp rehash                                                  #Resets the font path its current value. 
+#xset +fp /usr/share/fonts/local			         	#Sets the font path directory.
+#xset fp rehash                                                  #Resets the font path its current value. 
 
 xsetroot -cursor_name left_ptr &                                #Sets the mouse pointer cursor
 
