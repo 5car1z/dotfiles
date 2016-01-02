@@ -4,11 +4,15 @@
 
 # terminal emulator
 super + Return
-	urxvt
+	xterm
 
 # program launcher
 super + space
 	dmenu_run
+
+# run gyazo image capture program
+ctrl + shift + c 
+        gyazo
 
 # make sxhkd reload its configuration files:
 super + Escape
