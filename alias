@@ -30,6 +30,7 @@ alias mpv-otto-baroque="mpv --volume=30 http://yp.shoutcast.com/sbin/tunein-stat
 alias mpv-otto-classical="mpv --volume=30 http://yp.shoutcast.com/sbin/tunein-station.pls?id=332595"
 
 # Networking
+alias ip="wget -qO - ifconfig.co"
 alias fastping="ping -c 20 -s.2"
 
 alias ipt='sudo iptables'
