@@ -42,6 +42,9 @@ alias iptlistfw='sudo /sbin/iptables -L FORWARD -n -v --line-numbers'
 
 # Docker
 alias dps='docker ps'
+alias dpsa='docker ps -a'
+
+alias dip="docker inspect --format '{{ .NetworkSettings.IPAddress }}'"hh
 
 # Colours
 
