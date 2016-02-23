@@ -30,6 +30,7 @@ alias mpv-otto-baroque="mpv --volume=30 http://yp.shoutcast.com/sbin/tunein-stat
 alias mpv-otto-classical="mpv --volume=30 http://yp.shoutcast.com/sbin/tunein-station.pls?id=332595"
 
 # Networking
+alias ip="wget -qO - ifconfig.co"
 alias fastping="ping -c 20 -s.2"
 
 alias ipt='sudo iptables'
@@ -41,6 +42,15 @@ alias iptlistfw='sudo /sbin/iptables -L FORWARD -n -v --line-numbers'
 
 # Docker
 alias dps='docker ps'
+alias dpsa='docker ps -a'
+
+alias drm='docker rm'
+alias drm-all='docker rm $(docker ps -a -q)'
+
+alias drmi='docker rmi'
+alias drmi-all='docker rmi $(docker images -q)'
+
+alias dip="docker inspect --format '{{ .NetworkSettings.IPAddress }}'"
 
 # Colours
 
