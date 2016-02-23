@@ -52,6 +52,17 @@ alias drmi-all='docker rmi $(docker images -q)'
 
 alias dip="docker inspect --format '{{ .NetworkSettings.IPAddress }}'"
 
+# Arch Linux
+
+alias fetch2="fetch \
+--block_range 1 8 \
+--line_wrap off \
+--bold off \
+--uptime_shorthand on \
+--gtk_shorthand on \
+--colors 4 1 8 8 8 7 \
+"
+
 # Colours
 
 # Enable color support of ls and also add handy aliases
