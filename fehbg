@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# ~/.fehbg
+
+feh  --bg-fill '/home/scarlz/dotfiles/pc-master.jpg' '/home/scarlz/dotfiles/pc-master.jpg' 
