@@ -4,7 +4,7 @@
 
 echo -n "Installing Pacman packages..."
 sudo pacman -Syy && sudo pacman -Syu
-sudo pacman -S curl cowsay fortune-mod jq
+sudo pacman -S curl cowsay fortune-mod jq mpv jack2 compton
 echo -n "done"
 
 echo -n "Installing pip and cheat..."
