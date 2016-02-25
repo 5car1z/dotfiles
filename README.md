@@ -1,35 +1,35 @@
-#Linux Dotfiles
+# Linux Dotfiles
 
 ![Dotfiles Image](http://i.imgur.com/0wWR48G.png)
 
-##Dependencies
-
-###Arch Linux
+## Cloning Repository
 
 ```bash
-$ sudo pacman -S git curl fortune cowsay jq python-pip
-```
-
-```bash
-$ sudo pip install cheat
-```
-
-###Debian / Ubuntu
-
-```bash
-$ sudo apt-get install git curl fortune cowsay jq  python-pip
-```
-
-```bash
-$ sudo pip install cheat
+$ git clone https://github.com/5car1z/dotfiles.git ~
 ```
 
 ---
 
-##Cloning Repository
+## Arch Linux
 
 ```bash
-$ cd ~ && git clone https://github.com/5car1z/dotfiles.git
+$ ./install-arch-dotfile-dependencies.sh 
+```
+
+```bash
+$ ./install-dotfiles.sh
+```
+
+---
+
+## Debian / Ubuntu
+
+```bash
+$ ./install-debian-ubuntu-dependencies.sh  
+```
+
+```bash
+$ ./install-dotfiles.sh
 ```
 
 ---
