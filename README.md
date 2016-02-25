@@ -13,7 +13,7 @@ $ git clone https://github.com/5car1z/dotfiles.git ~
 ## Arch Linux
 
 ```bash
-$ ./install-arch-dotfile-dependencies.sh 
+$ ./install-arch-dotfile-dependencies.sh  
 ```
 
 ```bash
@@ -25,7 +25,7 @@ $ ./install-dotfiles.sh
 ## Debian / Ubuntu
 
 ```bash
-$ ./install-debian-ubuntu-dependencies.sh  
+$ ./install-debian-ubuntu-dotfile-dependencies.sh
 ```
 
 ```bash
