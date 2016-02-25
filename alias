@@ -16,6 +16,7 @@ alias please='sudo $(history -p !!)'
 # List 'ls'.
 alias l="ls -lF ${colorflag}"
 alias ll='ls -alF'
+alias llh='ls -alFh'
 alias la='ls -A'
 alias lc='ls -CF'
 
