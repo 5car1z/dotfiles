@@ -1,11 +1,11 @@
-# Easier navigation: .., ..., ...., ....., ~ 
+# easier navigation: .., ..., ...., ....., ~ 
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 alias ~="cd ~" 
 
-# Shortcuts
+# shortcuts
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias h="history"
@@ -13,23 +13,24 @@ alias j="jobs"
 alias dfs="cd ~/dotfiles"
 alias please='sudo $(history -p !!)'
 
-# List 'ls'.
+# list 'ls'.
 alias l="ls -lF ${colorflag}"
 alias ll='ls -alF'
+alias llh='ls -alFh'
 alias la='ls -A'
 alias lc='ls -CF'
 
-# Environment
+# environment
 alias path='echo -e ${PATH//:/\\n}'
 
-# System
+# system
 alias psgrep="ps aux | grep -v grep | grep -i -e VSZ -e"
 
-# Player 'mpv'
+# player 'mpv'
 alias mpv-otto-baroque="mpv --volume=30 http://yp.shoutcast.com/sbin/tunein-station.pls?id=435993"
 alias mpv-otto-classical="mpv --volume=30 http://yp.shoutcast.com/sbin/tunein-station.pls?id=332595"
 
-# Networking
+# networking
 alias ip="wget -qO - ifconfig.co"
 alias fastping="ping -c 20 -s.2"
 
@@ -63,9 +64,9 @@ alias fetch2="fetch \
 --colors 4 1 8 8 8 7 \
 "
 
-# Colours
+# colours
 
-# Enable color support of ls and also add handy aliases
+# enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
@@ -77,7 +78,7 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # Git Aliases (sorted alphabetically with some inculsive functions)
-# Adapted from oh-my-zsh git alias plugin. "compdef" is a Z shell autocompletion function, some of the aliases here used it but I removed them because of redundancy. 
+# adapted from oh-my-zsh git alias plugin. "compdef" is a Z shell autocompletion function, some of the aliases here used it but I removed them because of redundancy. 
 
 alias g='git'
 

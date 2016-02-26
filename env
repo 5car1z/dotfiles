@@ -1,14 +1,17 @@
-# Make vim the default editor.
+# make Vim the default editor.
 export EDITOR='vim';
 
-# Cheat environment variables.
+# set Cheat environment variables.
 export CHEATCOLORS=true
 
-#Set Go path and add it to system path.
+# add Blackbox program files to the system path.
+export PATH=$PATH:/usr/local/blackbox
+ 
+# set Go path and add it to system path.
 export GOPATH=$HOME/gopath
 export PATH=$GOPATH:$GOPATH/bin:$PATH
 
-# Colored less output:
+# colored less output:
 export LESS=-R
 export LESS_TERMCAP_me=$(printf '\e[0m')
 export LESS_TERMCAP_se=$(printf '\e[0m')

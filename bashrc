@@ -2,27 +2,27 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
-# Source the git completion file into the shell, must be sourced before the alias file is called as this is where bash git aliases are stored and recognised. 
+# source the git completion file into the shell, must be sourced before the alias file is called as this is where bash git aliases are stored and recognised. 
 . ~/.git-completion.bash
 
-# Export and source git-aware-prompt variable.
+# export and source git-aware-prompt variable.
 export GITAWAREPROMPT=~/.git-aware-prompt
 . "${GITAWAREPROMPT}/main.sh"
 
-# Source regular bash shell configuration files. 
+# source regular bash shell configuration files. 
 . ~/.inputrc
 . ~/.alias
 . ~/.functions
 . ~/.env
 
-# If not running interactively, don't do anything
+# if not running interactively, don't do anything
 case $- in
     *i*) ;;
       *) return;;
 esac
 
 # don't put duplicate lines or lines starting with space in the history.
-# See bash(1) for more options
+# see bash(1) for more options
 HISTCONTROL=ignoreboth
 
 # append to the history file, don't overwrite it
@@ -36,7 +36,7 @@ HISTFILESIZE=4000
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
-# If set, the pattern "**" used in a pathname expansion context will # match all files and zero or more directories and subdirectories.
+# if set, the pattern "**" used in a pathname expansion context will # match all files and zero or more directories and subdirectories.
 #shopt -s globstar
 
 # make less more friendly for non-text input files, see lesspipe(1)
@@ -59,7 +59,7 @@ force_color_prompt=yes
 
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-	# We have color support; assume it's compliant with Ecma-48
+	# we have color support; assume it's compliant with Ecma-48
 	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
 	# a case would tend to support setf rather than setaf.)
 	color_prompt=yes
@@ -74,7 +74,7 @@ else
     PS1="${debian_chroot:+($debian_chroot)}\u@\h:\w\[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
 fi
 
-# Append screen number to command prompt if running Screen
+# append screen number to command prompt if running Screen
 if [ "$WINDOW" ]; then export PS1="\[$bldwht\](screen #$WINDOW)\[$txtrst\]--$PS1"; fi
 
 unset color_prompt force_color_prompt

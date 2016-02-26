@@ -1,9 +1,9 @@
-# Create a new directory and enter it.
+# create a new directory and enter it.
 mkd() {
   mkdir -p "$@" && cd "$@"
   }
 
-# Update, upgrade, write to log and clean up.
+# update, upgrade, write to log and clean up.
 update_system() {
   sudo apt-get update
   sudo apt-get -y upgrade
@@ -12,7 +12,7 @@ update_system() {
   sudo apt-get autoremove
   }
 
-# Colored man pages (via less):
+# colored man pages (via less):
 man() {
     env LESS_TERMCAP_mb=$'\E[01;31m' \
     LESS_TERMCAP_md=$'\E[01;38;5;74m' \
@@ -34,8 +34,8 @@ mpv_twitch() {
 
 # Git General Functions
 
-# Display a random Git tip using "git-tips" Git repo and jq -- https://stedolan.github.io/jq/
-# Can add a -M option to the last line jq command of the function to disable the coloured output.
+# display a random Git tip using "git-tips" Git repo and jq -- https://stedolan.github.io/jq/
+# can add a -M option to the last line jq command of the function to disable the coloured output.
 random_git_tip() {
   tips_index=( $(seq 0 $(jq "length" ~/.git-tips/tips.json) | sort -R | head -1) )
   echo "--------------------------------------------------------------"
@@ -44,9 +44,9 @@ random_git_tip() {
 
 # Git Alias Misc Functions
 
-# The current branch name
-# Usage example: git pull origin $(current_branch)
-# Using '--quiet' with 'symbolic-ref' will not cause a fatal error (128) if
+# the current branch name
+# usage example: git pull origin $(current_branch)
+# using '--quiet' with 'symbolic-ref' will not cause a fatal error (128) if
 # it's not a symbolic ref, but in a Git repo.
 function current_branch() {
   local ref
@@ -58,20 +58,20 @@ function current_branch() {
   fi
   echo ${ref#refs/heads/}
 }
-# The list of remotes
+# the list of remotes
 function current_repository() {
   if ! $_omz_git_git_cmd rev-parse --is-inside-work-tree &> /dev/null; then
     return
   fi
   echo $($_omz_git_git_cmd remote -v | cut -d':' -f 2)
 }
-# Pretty log messages
+# pretty log messages
 function _git_log_prettily(){
   if ! [ -z $1 ]; then
     git log --pretty=$1
   fi
 }
-# Warn if the current branch is a WIP
+# warn if the current branch is a WIP
 function work_in_progress() {
   if $(git log -n 1 2>/dev/null | grep -q -c "\-\-wip\-\-"); then
     echo "WIP!!"

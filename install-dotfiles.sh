@@ -18,7 +18,7 @@ cheatsheets="ping"
 ##########
 
 #Dependencies
-#1. curl 			| apt-get, pacman
+#1. Curl 			| apt-get, pacman
 #2. Git  			| apt-get, pacman
 #3. Cheat                       | pip
 #4. Fortune                     | apt-get, pacman
