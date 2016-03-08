@@ -1,4 +1,5 @@
-stow bash 
+stow bash
+stow cheat
 stow git
 stow tmux
 stow vim 
