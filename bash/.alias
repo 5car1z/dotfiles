@@ -54,11 +54,16 @@ alias drmi-all='docker rmi $(docker images -q)'
 alias dip="docker inspect --format '{{ .NetworkSettings.IPAddress }}'"
 
 # Tmux
-
 alias tmux="TERM=screen-256color-bce tmux"
+alias tls='tmux list-session'
+alias tlw='tmux list-window'
+alias tsw='tmux switch -t '
+alias tlc='tmux list-command'
+alias tat='tmux attach -t'
+alias trs='tmux rename-session -t'
+alias tks='tmux kill-session -t'
 
 # Arch Linux
-
 alias fetch2="fetch \
 --block_range 1 8 \
 --line_wrap off \
