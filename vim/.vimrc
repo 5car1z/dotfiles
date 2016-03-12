@@ -62,6 +62,12 @@ set spelllang=en_gb             "Enable English - Great British spell checking.
 
 "6 -- Remapping & Keybindings
 
+"Remap leader key to ,
+let mapleader=","
+
+"Toggle NERDTree plugin menu on and off with leader then k.
+nmap <silent> <leader>k :NERDTreeToggle<cr>
+
 "Allows turning spell checking on and off with leader then s key. 
 nmap <silent> <leader>s :set spell!<CR>
 
