@@ -53,6 +53,10 @@ alias drmi-all='docker rmi $(docker images -q)'
 
 alias dip="docker inspect --format '{{ .NetworkSettings.IPAddress }}'"
 
+# Tmux
+
+alias tmux="TERM=screen-256color-bce tmux"
+
 # Arch Linux
 
 alias fetch2="fetch \
