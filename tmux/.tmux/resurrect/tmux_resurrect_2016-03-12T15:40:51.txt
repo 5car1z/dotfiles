@@ -1,0 +1,8 @@
+pane	dotfiles	0	:vim-dotfiles	1	:*	1	:/home/scarlz/dotfiles	1	bash	:
+pane	dotfiles	0	:vim-dotfiles	1	:*	2	:/home/scarlz/dotfiles	0	bash	:
+pane	hexo	0	:vim-post hexo-server deploy-github	1	:*	1	:/home/scarlz/tott-hexo/source/_posts	1	bash	:
+pane	hexo	0	:vim-post hexo-server deploy-github	1	:*	2	:/home/scarlz/tott-hexo	0	bash	:
+pane	hexo	0	:vim-post hexo-server deploy-github	1	:*	3	:/home/scarlz/tott-hexo	0	bash	:
+window	dotfiles	0	1	:*	85da,239x60,0,0{114x60,0,0,16,124x60,115,0,17}
+window	hexo	0	1	:*	02c2,212x72,0,0{105x72,0,0,5,106x72,106,0[106x36,106,0,6,106x35,106,37,7]}
+state	dotfiles	hexo
