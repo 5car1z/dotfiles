@@ -1,10 +1,10 @@
 #!/bin/bash
 
-# install dotfile dependencies for Arch Linux based systems. 
+# install dotfile dependencies for Debian / Ubuntu based systems. 
 
 echo -n "Installing Apt packages..."
 sudo apt-get -y update && sudo apt-get -y upgrade 
-sudo apt-get install curl cowsay fortune-mod jq
+sudo apt-get install curl cowsay fortune-mod jq vim tmux
 echo -n "done"
 
 echo -n "Installing pip and cheat..."
