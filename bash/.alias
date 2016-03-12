@@ -60,6 +60,7 @@ alias tlw='tmux list-window'
 alias tsw='tmux switch -t '
 alias tlc='tmux list-command'
 alias tat='tmux attach -t'
+alias tdt='tmux detach'
 alias trs='tmux rename-session -t'
 alias tks='tmux kill-session -t'
 
