@@ -43,3 +43,9 @@
 [submodule "git/tips"]
 	path = git/tips
 	url = https://github.com/git-tips/tips.git
+[submodule "git/.git-aware-prompt"]
+	path = git/.git-aware-prompt
+	url = https://github.com/jimeh/git-aware-prompt.git
+[submodule "git/.git-tips"]
+	path = git/.git-tips
+	url = https://github.com/git-tips/tips.git
