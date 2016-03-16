@@ -9,7 +9,7 @@ echo -n "done"
 
 echo -n "Installing pip and cheat..."
 wget -v https://bootstrap.pypa.io/get-pip.py -P ~
-python ~/get-pip.py 
+sudo python ~/get-pip.py 
 sudo pip install cheat 
 echo -n "done"
 
