@@ -49,3 +49,6 @@
 [submodule "git/.git-tips"]
 	path = git/.git-tips
 	url = https://github.com/git-tips/tips.git
+[submodule "tmux/.tmux/plugins/tpm"]
+	path = tmux/.tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm.git
