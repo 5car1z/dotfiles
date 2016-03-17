@@ -9,7 +9,8 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-let NERDTreeDirArrows = 0
+let g:NERDTreeDirArrows = 1
+let g:NERDTreeShowHidden = 1
 
 let g:startify_custom_header = 
 			\ map(split(system('fortune -s | cowthink'), '\n'), '"   ". v:val') + ['',''] 			"Displays a cowsay message with fortune in vim-startify.
