@@ -3,7 +3,7 @@ update_system() {
   sudo apt-get update
   sudo apt-get -y upgrade
   installdate=$(date +"%Y-%m-%d")
-  echo -e "$installdate Installed package $1" >> ~/system-changelog.txt
+  echo -e "$installdate - installed package $1" 
   sudo apt-get autoremove
   }
 
