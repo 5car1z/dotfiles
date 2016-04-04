@@ -25,6 +25,7 @@ alias path='echo -e ${PATH//:/\\n}'
 
 # system
 alias psgrep="ps aux | grep -v grep | grep -i -e VSZ -e"
+alias shutdown_system="sudo shutdown -h now"
 
 # player 'mpv'
 alias mpv-otto-baroque="mpv --volume=30 http://yp.shoutcast.com/sbin/tunein-station.pls?id=435993"
