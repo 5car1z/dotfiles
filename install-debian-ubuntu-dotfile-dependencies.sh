@@ -4,7 +4,7 @@
 
 echo -n "Installing Apt packages..."
 sudo apt-get -y update && sudo apt-get -y upgrade 
-sudo apt-get install curl cowsay fortune-mod jq vim tmux ranger
+sudo apt-get install stow curl cowsay fortune-mod jq vim tmux ranger
 echo -n "done"
 
 echo -n "Installing pip and cheat..."
