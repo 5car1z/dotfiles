@@ -23,6 +23,8 @@ let g:startify_session_delete_buffers = 1                                       
 let g:limelight_conceal_ctermfg = 'gray'
 let g:limelight_conceal_ctermfg = 240
 
+let g:vim_json_syntax_conceal = 0
+
 "2 -- General
 
 filetype plugin on              "Allows plugins to be enabled based on file types.  
