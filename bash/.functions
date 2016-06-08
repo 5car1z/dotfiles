@@ -1,9 +1,7 @@
 # update, upgrade, write to log and clean up.
 update_system() {
   sudo apt-get update
-  sudo apt-get -y upgrade
-  installdate=$(date +"%Y-%m-%d")
-  echo -e "$installdate - installed package $1" 
+  sudo apt-get upgrade
   sudo apt-get autoremove
   }
 
