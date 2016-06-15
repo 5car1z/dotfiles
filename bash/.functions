@@ -1,4 +1,4 @@
-# update, upgrade, write to log and clean up.
+# update, upgrade, and clean up.
 update_system() {
   sudo apt-get update
   sudo apt-get upgrade
