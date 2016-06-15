@@ -5,4 +5,4 @@ stow tmux
 stow vim 
 stow zsh
 
-git submodule update --init --recursive --remote git vim/.vim/bundle
+git submodule update --init --recursive git vim/.vim/bundle
