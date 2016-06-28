@@ -9,6 +9,8 @@
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
+# runs vmware tools user daemon at startup for when running i3 in a virtual machine.
+exec --no-startup-id vmware-user 
 set $mod Mod4
 exec setxkbmap gb
 
