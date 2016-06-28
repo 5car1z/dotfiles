@@ -79,7 +79,7 @@ if [ "$WINDOW" ]; then export PS1="\[$bldwht\](screen #$WINDOW)\[$txtrst\]--$PS1
 
 unset color_prompt force_color_prompt
 
-term_emulator="$(ps -p $PPID | awk '{print $4}' | sed '/CMD/d')" # stores the name of the terminal emulator program in use for ther session. 
+term_emulator="$(ps -p $PPID | awk '{print $4}' | sed '/CMD/d')" # stores the name of the terminal emulator program in use for the session. 
 
 case $term_emulator in
 xterm) 
