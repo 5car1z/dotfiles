@@ -44,7 +44,8 @@ syntax enable   	"Enables syntax highlighting.
 
 "4 -- UI
 
-set number		"Enables line numbers. 
+set number              "Enables absolute line numbers; vim-numbertoggle takes care of all extra functionality. 
+set relativenumber      "Enables relative line numbers; vim-numbertoggle takes care of all extra functionality. 
 set ignorecase  	"Makes searches case-insensitive. 
 set wildmenu    	"Enables auto-completion options to be dsiplayed in a horizontal bar.
 set hlsearch    	"Highlights search results.
@@ -59,7 +60,7 @@ set statusline+=\ %=%*
 
 "5 -- Formatting & Layout
 
-set nowrap			"Disables text wrapping
+set wrap linebreak nolist       "Enables text wrapping based on lines ending and beginning - http://vimcasts.org/episodes/soft-wrapping-text/
 set ffs=unix,dos,mac            "Use Unix as the standard file type.
 set spelllang=en_gb             "Enable English - Great British spell checking.
 
