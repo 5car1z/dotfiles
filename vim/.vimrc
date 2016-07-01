@@ -13,7 +13,7 @@ let g:NERDTreeDirArrows = 1
 let g:NERDTreeShowHidden = 1
 
 let g:startify_custom_header = 
-			\ map(split(system('fortune -s | cowthink'), '\n'), '"   ". v:val') + ['',''] 			"Displays a cowsay message with fortune in vim-startify.
+			\ map(split(system('fortune -s | cowthink'), '\n'), '"   ". v:val') + [''] + map(split(system('vim --version | head -1'), '\n'), '"   ". v:val') 			"Displays a cowsay message with fortune in vim-startify, alongside the current Vim version build details. 
 let g:startify_custom_footer =
                         \ [''] + map(split(system('date -R'), '\n'), '"   ". v:val') + [''] + map(split(system('lsb_release -a | tail -n 3'), '\n'), '"   ". v:val') + ['']    "Displays the OS release name and version in vim-startify. 
 
@@ -27,13 +27,17 @@ let g:vim_json_syntax_conceal = 0
 
 "2 -- General
 
-filetype plugin on              "Allows plugins to be enabled based on file types.  
-filetype indent on              "Enables indentation based on file types. 
+filetype plugin on                            "Allows plugins to be enabled based on file types.  
+filetype indent on                            "Enables indentation based on file types. 
 
-set nocompatible		"Turns off vi compatibility allowing all features of vim to be enabled. 
-set history=500 		"Increases amount of commands stored in :cmdline history to 500.
-set undolevels=500              "Remember much more undo levels. 
-set showmode            	"Show current mode at the bottom of the screen.  
+set nocompatible	               	      "Turns off vi compatibility allowing all features of vim to be enabled. 
+set history=500 		              "Increases amount of commands stored in :cmdline history to 500.
+
+set undolevels=500                            "Remember much more undo levels. 
+set undofile                                  "Enables the creation of undo history files that persistently stores past file changes.
+set undodir=/home/$USER/.config/vim-undos     "Set the location of the above undo history files.
+
+set showmode            	              "Show current mode at the bottom of the screen.  
 
 "3 -- Themes & Colours
 
@@ -77,6 +81,11 @@ nmap <silent> <leader>s :set spell!<CR>
 
 "Spacebar can now be used to open/close a folded section with this binding.
 nnoremap <Space> za     	 
+
+" These two lines remap 'j' and 'k' to traverse visual lines instead of actual
+" lines so moving up and down works with text wrapped lines.
+noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')    
+noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
 
 "These next four lines disable the arrow keys. 
 map <up> <nop>
