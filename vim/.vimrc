@@ -34,8 +34,6 @@ set nocompatible	               	      "Turns off vi compatibility allowing all 
 set history=500 		              "Increases amount of commands stored in :cmdline history to 500.
 
 set undolevels=500                            "Remember much more undo levels. 
-set undofile                                  "Enables the creation of undo history files that persistently stores past file changes.
-set undodir=/home/$USER/.config/vim-undos     "Set the location of the above undo history files.
 
 set showmode            	              "Show current mode at the bottom of the screen.  
 
