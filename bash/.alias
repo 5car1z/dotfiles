@@ -134,8 +134,8 @@ alias grhh='git reset HEAD --hard'
 alias gst='git status'
 alias gsta='git stash'
 
-alias initialise_submodules='git submodule update --init --recursive git/ vim/'
-alias update_submodules='git submodule update --init --recursive --remote git/ vim/'
+alias initialise-dotfile-submodules='git submodule update --init --recursive git/ vim/'
+alias update-dotfile-submodules='git submodule update --init --recursive --remote git/ vim/'
 
 # Git completion for some of the above aliases.
 
