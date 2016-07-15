@@ -14,4 +14,6 @@ sudo pip install cheat virtualenv
 rm ~/get-pip.py
 echo -n "Done.\n"
 
-
+echo -n "Copying Bash completion scripts to /etc/bash_completion.d system directory.\n"
+sudo cp completions/* /etc/bash_completion.d/
+echo -n "Done."
