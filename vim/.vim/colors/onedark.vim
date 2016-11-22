@@ -70,11 +70,16 @@ if !exists("g:onedark_terminal_italics")
   let g:onedark_terminal_italics = 0
 endif
 
-" This function was borrowed from FlatColor: https://github.com/MaxSt/FlatColor/
-" It was based on one found in hemisu: https://github.com/noahfrederick/vim-hemisu/
+" This function is based on one from FlatColor: https://github.com/MaxSt/FlatColor/
+" Which in turn was based on one found in hemisu: https://github.com/noahfrederick/vim-hemisu/
 function! s:h(group, style)
-  if g:onedark_terminal_italics == 0 && has_key(a:style, "cterm") && a:style["cterm"] == "italic"
-    unlet a:style.cterm
+  if g:onedark_terminal_italics == 0
+    if has_key(a:style, "cterm") && a:style["cterm"] == "italic"
+      unlet a:style.cterm
+    endif
+    if has_key(a:style, "gui") && a:style["gui"] == "italic"
+      unlet a:style.gui
+    endif
   endif
   if g:onedark_termcolors == 16
     let l:ctermfg = (has_key(a:style, "fg") ? a:style.fg.cterm16 : "NONE")
@@ -82,7 +87,7 @@ function! s:h(group, style)
   else
     let l:ctermfg = (has_key(a:style, "fg") ? a:style.fg.cterm : "NONE")
     let l:ctermbg = (has_key(a:style, "bg") ? a:style.bg.cterm : "NONE")
-  end
+  endif
   execute "highlight" a:group
     \ "guifg="   (has_key(a:style, "fg")    ? a:style.fg.gui   : "NONE")
     \ "guibg="   (has_key(a:style, "bg")    ? a:style.bg.gui   : "NONE")
@@ -141,7 +146,7 @@ call s:h("Statement", { "fg": s:purple }) " any statement
 call s:h("Conditional", { "fg": s:purple }) " if, then, else, endif, switch, etc.
 call s:h("Repeat", { "fg": s:purple }) " for, do, while, etc.
 call s:h("Label", { "fg": s:purple }) " case, default, etc.
-call s:h("Operator", {}) " sizeof", "+", "*", etc.
+call s:h("Operator", { "fg": s:purple }) " sizeof", "+", "*", etc.
 call s:h("Keyword", { "fg": s:red }) " any other keyword
 call s:h("Exception", { "fg": s:purple }) " try, catch, throw
 call s:h("PreProc", { "fg": s:yellow }) " generic Preprocessor
@@ -174,11 +179,11 @@ call s:h("Cursor", { "fg": s:black, "bg": s:blue }) " the character under the cu
 call s:h("CursorIM", {}) " like Cursor, but used when in IME mode
 call s:h("CursorColumn", { "bg": s:cursor_grey }) " the screen column that the cursor is in when 'cursorcolumn' is set
 call s:h("CursorLine", { "bg": s:cursor_grey }) " the screen line that the cursor is in when 'cursorline' is set
-call s:h("Directory", {}) " directory names (and other special names in listings)
-call s:h("DiffAdd", { "fg": s:green }) " diff mode: Added line
-call s:h("DiffChange", { "fg": s:dark_yellow }) " diff mode: Changed line
+call s:h("Directory", { "fg": s:blue }) " directory names (and other special names in listings)
+call s:h("DiffAdd", { "bg": s:visual_grey}) " diff mode: Added line
+call s:h("DiffChange", { "bg": s:visual_grey }) " diff mode: Changed line
 call s:h("DiffDelete", { "fg": s:red }) " diff mode: Deleted line
-call s:h("DiffText", { "fg": s:blue }) " diff mode: Changed text within a changed line
+call s:h("DiffText", { "bg": s:visual_grey, "fg": s:yellow }) " diff mode: Changed text within a changed line
 call s:h("ErrorMsg", {}) " error messages on the command line
 call s:h("VertSplit", { "fg": s:vertsplit }) " the column separating vertically split windows
 call s:h("Folded", { "fg": s:comment_grey }) " line used for closed folds
@@ -240,7 +245,7 @@ call s:h("cssSelectorOp2", { "fg": s:purple })
 call s:h("cssTagName", { "fg": s:red })
 
 " HTML
-call s:h("Title", { "fg": s:white })
+call s:h("htmlTitle", { "fg": s:white })
 call s:h("htmlArg", { "fg": s:dark_yellow })
 call s:h("htmlEndTag", { "fg": s:white })
 call s:h("htmlH1", { "fg": s:white })
@@ -298,6 +303,8 @@ call s:h("javascriptVariable", { "fg": s:purple })
 " JSON
 call s:h("jsonCommentError", { "fg": s:white })
 call s:h("jsonKeyword", { "fg": s:red })
+call s:h("jsonBoolean", { "fg": s:dark_yellow })
+call s:h("jsonNumber", { "fg": s:dark_yellow })
 call s:h("jsonQuote", { "fg": s:white })
 call s:h("jsonMissingCommaError", { "fg": s:red, "gui": "reverse" })
 call s:h("jsonNoQuotesError", { "fg": s:red, "gui": "reverse" })
@@ -366,6 +373,11 @@ call s:h("sassMixin", { "fg": s:purple })
 call s:h("sassMixinName", { "fg": s:blue })
 call s:h("sassMixing", { "fg": s:purple })
 
+" TypeScript
+call s:h("typescriptReserved", { "fg": s:purple })
+call s:h("typescriptEndColons", { "fg": s:white })
+call s:h("typescriptBraces", { "fg": s:white })
+
 " XML
 call s:h("xmlAttrib", { "fg": s:dark_yellow })
 call s:h("xmlEndTag", { "fg": s:red })
@@ -376,15 +388,20 @@ call s:h("xmlTagName", { "fg": s:red })
 " | Plugin Highlighting |
 " +---------------------+
 
+" airblade/vim-gitgutter
+hi link GitGutterAdd    SignifySignAdd
+hi link GitGutterChange SignifySignChange
+hi link GitGutterDelete SignifySignDelete
+
 " mhinz/vim-signify
 call s:h("SignifySignAdd", { "fg": s:green })
 call s:h("SignifySignChange", { "fg": s:yellow })
 call s:h("SignifySignDelete", { "fg": s:red })
 
-" airblade/vim-gitgutter
-hi link GitGutterAdd    SignifySignAdd
-hi link GitGutterChange SignifySignChange
-hi link GitGutterDelete SignifySignDelete
+" neomake/neomake
+call s:h("NeomakeWarningSign", { "fg": s:yellow })
+call s:h("NeomakeErrorSign", { "fg": s:red })
+call s:h("NeomakeInfoSign", { "fg": s:blue })
 
 " tpope/vim-fugitive
 call s:h("diffAdded", { "fg": s:green })
