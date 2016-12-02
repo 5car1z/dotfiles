@@ -1,14 +1,13 @@
 #
-# /home/scarlz/.nvidia-settings-rc
+# /home/scarlz/dotfiles/xorg/.nvidia-settings-rc
 #
 # Configuration file for nvidia-settings - the NVIDIA X Server Settings utility
-# Generated on Fri Jul 31 14:54:51 2015
+# Generated on Fri Dec  2 14:08:18 2016
 #
 
 # ConfigProperties:
 
 RcFileLocale = C
-ToolTips = Yes
 DisplayStatusBar = Yes
 SliderTextEntries = Yes
 IncludeDisplayNameInConfigFile = Yes
@@ -20,59 +19,58 @@ Timer = Memory_Used_(GPU_0),Yes,3000
 
 # Attributes:
 
-arch-corsair:0.0/SyncToVBlank=1
-arch-corsair:0.0/LogAniso=0
-arch-corsair:0.0/FSAA=0
-arch-corsair:0.0/TextureSharpen=1
-arch-corsair:0.0/TextureClamping=1
-arch-corsair:0.0/FXAA=0
-arch-corsair:0.0/AllowFlipping=1
-arch-corsair:0.0/FSAAAppControlled=0
-arch-corsair:0.0/LogAnisoAppControlled=0
-arch-corsair:0.0/OpenGLImageSettings=1
-arch-corsair:0.0/FSAAAppEnhanced=1
-arch-corsair:0.0/RedBrightness=0.000000
-arch-corsair:0.0/GreenBrightness=0.000000
-arch-corsair:0.0/BlueBrightness=0.000000
-arch-corsair:0.0/RedContrast=0.000000
-arch-corsair:0.0/GreenContrast=0.000000
-arch-corsair:0.0/BlueContrast=0.000000
-arch-corsair:0.0/RedGamma=1.000000
-arch-corsair:0.0/GreenGamma=1.000000
-arch-corsair:0.0/BlueGamma=1.000000
-arch-corsair:0[DPY:DVI-I-0]/Dithering=0
-arch-corsair:0[DPY:DVI-I-0]/DitheringMode=0
-arch-corsair:0[DPY:DVI-I-0]/DitheringDepth=0
-arch-corsair:0[DPY:DVI-I-0]/SynchronousPaletteUpdates=0
-arch-corsair:0[DPY:DVI-I-1]/Dithering=0
-arch-corsair:0[DPY:DVI-I-1]/DitheringMode=0
-arch-corsair:0[DPY:DVI-I-1]/DitheringDepth=0
-arch-corsair:0[DPY:DVI-I-1]/ColorSpace=0
-arch-corsair:0[DPY:DVI-I-1]/ColorRange=0
-arch-corsair:0[DPY:DVI-I-1]/SynchronousPaletteUpdates=0
-arch-corsair:0[DPY:HDMI-0]/Dithering=0
-arch-corsair:0[DPY:HDMI-0]/DitheringMode=0
-arch-corsair:0[DPY:HDMI-0]/DitheringDepth=0
-arch-corsair:0[DPY:HDMI-0]/ColorSpace=0
-arch-corsair:0[DPY:HDMI-0]/ColorRange=0
-arch-corsair:0[DPY:HDMI-0]/SynchronousPaletteUpdates=0
-arch-corsair:0[DPY:DP-0]/Dithering=0
-arch-corsair:0[DPY:DP-0]/DitheringMode=0
-arch-corsair:0[DPY:DP-0]/DitheringDepth=0
-arch-corsair:0[DPY:DP-0]/ColorSpace=0
-arch-corsair:0[DPY:DP-0]/ColorRange=0
-arch-corsair:0[DPY:DP-0]/SynchronousPaletteUpdates=0
-arch-corsair:0[DPY:DVI-D-0]/Dithering=0
-arch-corsair:0[DPY:DVI-D-0]/DitheringMode=0
-arch-corsair:0[DPY:DVI-D-0]/DitheringDepth=0
-arch-corsair:0[DPY:DVI-D-0]/DigitalVibrance=0
-arch-corsair:0[DPY:DVI-D-0]/ColorSpace=0
-arch-corsair:0[DPY:DVI-D-0]/ColorRange=0
-arch-corsair:0[DPY:DVI-D-0]/SynchronousPaletteUpdates=0
-arch-corsair:0[DPY:DP-1]/Dithering=0
-arch-corsair:0[DPY:DP-1]/DitheringMode=0
-arch-corsair:0[DPY:DP-1]/DitheringDepth=0
-arch-corsair:0[DPY:DP-1]/DigitalVibrance=0
-arch-corsair:0[DPY:DP-1]/ColorSpace=0
-arch-corsair:0[DPY:DP-1]/ColorRange=0
-arch-corsair:0[DPY:DP-1]/SynchronousPaletteUpdates=0
+archlinux-corsair:0.0/SyncToVBlank=1
+archlinux-corsair:0.0/LogAniso=4
+archlinux-corsair:0.0/FSAA=0
+archlinux-corsair:0.0/TextureClamping=1
+archlinux-corsair:0.0/FXAA=1
+archlinux-corsair:0.0/AllowFlipping=1
+archlinux-corsair:0.0/FSAAAppControlled=1
+archlinux-corsair:0.0/LogAnisoAppControlled=0
+archlinux-corsair:0.0/OpenGLImageSettings=0
+archlinux-corsair:0.0/FSAAAppEnhanced=0
+archlinux-corsair:0.0/RedBrightness=0.000000
+archlinux-corsair:0.0/GreenBrightness=0.000000
+archlinux-corsair:0.0/BlueBrightness=0.000000
+archlinux-corsair:0.0/RedContrast=0.000000
+archlinux-corsair:0.0/GreenContrast=0.000000
+archlinux-corsair:0.0/BlueContrast=0.000000
+archlinux-corsair:0.0/RedGamma=1.000000
+archlinux-corsair:0.0/GreenGamma=1.000000
+archlinux-corsair:0.0/BlueGamma=1.000000
+archlinux-corsair:0[DPY:DVI-I-0]/Dithering=0
+archlinux-corsair:0[DPY:DVI-I-0]/DitheringMode=0
+archlinux-corsair:0[DPY:DVI-I-0]/DitheringDepth=0
+archlinux-corsair:0[DPY:DVI-I-0]/SynchronousPaletteUpdates=0
+archlinux-corsair:0[DPY:DVI-I-1]/Dithering=0
+archlinux-corsair:0[DPY:DVI-I-1]/DitheringMode=0
+archlinux-corsair:0[DPY:DVI-I-1]/DitheringDepth=0
+archlinux-corsair:0[DPY:DVI-I-1]/ColorSpace=0
+archlinux-corsair:0[DPY:DVI-I-1]/ColorRange=0
+archlinux-corsair:0[DPY:DVI-I-1]/SynchronousPaletteUpdates=0
+archlinux-corsair:0[DPY:HDMI-0]/Dithering=0
+archlinux-corsair:0[DPY:HDMI-0]/DitheringMode=0
+archlinux-corsair:0[DPY:HDMI-0]/DitheringDepth=0
+archlinux-corsair:0[DPY:HDMI-0]/ColorSpace=0
+archlinux-corsair:0[DPY:HDMI-0]/ColorRange=0
+archlinux-corsair:0[DPY:HDMI-0]/SynchronousPaletteUpdates=0
+archlinux-corsair:0[DPY:DP-0]/Dithering=0
+archlinux-corsair:0[DPY:DP-0]/DitheringMode=0
+archlinux-corsair:0[DPY:DP-0]/DitheringDepth=0
+archlinux-corsair:0[DPY:DP-0]/ColorSpace=0
+archlinux-corsair:0[DPY:DP-0]/ColorRange=0
+archlinux-corsair:0[DPY:DP-0]/SynchronousPaletteUpdates=0
+archlinux-corsair:0[DPY:DVI-D-0]/Dithering=0
+archlinux-corsair:0[DPY:DVI-D-0]/DitheringMode=0
+archlinux-corsair:0[DPY:DVI-D-0]/DitheringDepth=0
+archlinux-corsair:0[DPY:DVI-D-0]/DigitalVibrance=0
+archlinux-corsair:0[DPY:DVI-D-0]/ColorSpace=0
+archlinux-corsair:0[DPY:DVI-D-0]/ColorRange=0
+archlinux-corsair:0[DPY:DVI-D-0]/SynchronousPaletteUpdates=0
+archlinux-corsair:0[DPY:DP-1]/Dithering=0
+archlinux-corsair:0[DPY:DP-1]/DitheringMode=0
+archlinux-corsair:0[DPY:DP-1]/DitheringDepth=0
+archlinux-corsair:0[DPY:DP-1]/DigitalVibrance=0
+archlinux-corsair:0[DPY:DP-1]/ColorSpace=0
+archlinux-corsair:0[DPY:DP-1]/ColorRange=0
+archlinux-corsair:0[DPY:DP-1]/SynchronousPaletteUpdates=0
