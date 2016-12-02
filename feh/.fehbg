@@ -2,4 +2,4 @@
 
 # ~/.fehbg
 
-feh  --bg-fill '/home/scarlz/dotfiles/pc-master.jpg' '/home/scarlz/dotfiles/pc-master.jpg' 
+feh  --bg-fill '/home/scarlz/dotfiles/images/pc-master.jpg' '/home/scarlz/dotfiles/images/pc-master.jpg' 
