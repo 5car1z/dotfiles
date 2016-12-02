@@ -1,12 +1,11 @@
-# easier navigation: .., ..., ...., ....., ~ 
+# easier naviga_tion: .., ..., ...., ....., ~ 
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 alias ~="cd ~" 
 
-# shortcuts
-alias dl="cd ~/Downloads"
+# shortcuts alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias h="history"
 alias j="jobs"
@@ -28,8 +27,8 @@ alias psgrep="ps aux | grep -v grep | grep -i -e VSZ -e"
 alias shutdown_system="sudo shutdown -h now"
 
 # player 'mpv'
-alias mpv-otto-baroque="mpv --volume=30 http://yp.shoutcast.com/sbin/tunein-station.pls?id=435993"
-alias mpv-otto-classical="mpv --volume=30 http://yp.shoutcast.com/sbin/tunein-station.pls?id=332595"
+alias mpv-otto-baroque="mpv --volume=60 http://yp.shoutcast.com/sbin/tunein-station.pls?id=787673"
+alias mpv-otto-classical="mpv --volume=60 http://yp.shoutcast.com/sbin/tunein-station.pls?id=935428"
 
 # networking
 alias ip="wget -qO - ifconfig.co"
