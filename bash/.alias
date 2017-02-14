@@ -1,4 +1,4 @@
-# easier naviga_tion: .., ..., ...., ....., ~ 
+# easier navigation: .., ..., ...., ....., ~ 
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
@@ -34,12 +34,19 @@ alias mpv-otto-classical="mpv --volume=60 http://yp.shoutcast.com/sbin/tunein-st
 alias ip="wget -qO - ifconfig.co"
 alias fastping="ping -c 20 -s.2"
 
+# iptables
 alias ipt='sudo iptables'
  
 alias iptlist='sudo /sbin/iptables -L -n -v --line-numbers'
 alias iptlistin='sudo /sbin/iptables -L INPUT -n -v --line-numbers'
 alias iptlistout='sudo /sbin/iptables -L OUTPUT -n -v --line-numbers'
 alias iptlistfw='sudo /sbin/iptables -L FORWARD -n -v --line-numbers'
+
+# ufw
+alias ufw='sudo ufw'
+
+alias ufwstatver='sudo ufw status verbose'
+alias ufwstatnum='sudo ufw status numbered'
 
 # Docker
 alias dps='docker ps'
