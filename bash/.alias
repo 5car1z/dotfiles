@@ -27,8 +27,8 @@ alias psgrep="ps aux | grep -v grep | grep -i -e VSZ -e"
 alias shutdown_system="sudo shutdown -h now"
 
 # player 'mpv'
-alias mpv-otto-baroque="mpv --volume=60 http://yp.shoutcast.com/sbin/tunein-station.pls?id=787673"
-alias mpv-otto-classical="mpv --volume=60 http://yp.shoutcast.com/sbin/tunein-station.pls?id=935428"
+alias mpv-otto-baroque="mpv --volume=60 https://yp.shoutcast.com/sbin/tunein-station.pls?id=1138627"
+alias mpv-otto-classical="mpv --volume=60 https://yp.shoutcast.com/sbin/tunein-station.pls?id=1467638"
 
 # networking
 alias ip="wget -qO - ifconfig.co"
