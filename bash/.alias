@@ -5,19 +5,29 @@ alias ....="cd ../../.."
 alias .....="cd ../../../.."
 alias ~="cd ~" 
 
-# shortcuts alias dl="cd ~/Downloads"
+# shortcuts alias 
+alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias h="history"
 alias j="jobs"
 alias dfs="cd ~/dotfiles"
 alias please='sudo $(history -p !!)'
 
+# exa
+alias ls="exa"
+alias l="exa -a"
+alias ll="exa -lgh"
+alias la="exa -lagh"
+alias lt="exa -T"
+alias lg="exa -l --git"
+
 # list 'ls'.
-alias l="ls -lF ${colorflag}"
-alias ll='ls -alF'
-alias llh='ls -alFh'
-alias la='ls -A'
-alias lc='ls -CF'
+#alias ls='ls --color=auto'
+#alias l="ls -lF ${colorflag}"
+#alias ll='ls -alF'
+#alias la='ls -A'
+#alias llh='ls -alFh'
+#alias lc='ls -CF'
 
 # environment
 alias path='echo -e ${PATH//:/\\n}'
@@ -48,7 +58,7 @@ alias ufw='sudo ufw'
 alias ufwstatver='sudo ufw status verbose'
 alias ufwstatnum='sudo ufw status numbered'
 
-# Docker
+# docker
 alias dps='docker ps'
 alias dpsa='docker ps -a'
 
@@ -60,7 +70,7 @@ alias drmi-all='docker rmi $(docker images -q)'
 
 alias dip="docker inspect --format '{{ .NetworkSettings.IPAddress }}'"
 
-# Tmux
+# tmux
 alias tmux="TERM=screen-256color-bce tmux"
 alias tls='tmux list-session'
 alias tlw='tmux list-window'
@@ -86,7 +96,6 @@ alias fetch2="fetch \
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
     alias dir='dir --color=auto'
     alias vdir='vdir --color=auto'
     alias grep='grep --color=auto'
