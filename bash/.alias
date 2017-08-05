@@ -19,7 +19,7 @@ alias l="exa -a"
 alias ll="exa -lgh"
 alias la="exa -lagh"
 alias lt="exa -T"
-alias lg="exa -l --git"
+alias lg="exa -lagh --git"
 
 # list 'ls'.
 #alias ls='ls --color=auto'
