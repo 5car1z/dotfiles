@@ -17,7 +17,7 @@ let g:startify_custom_header =
 let g:startify_custom_footer =
                         \ [''] + map(split(system('date -R'), '\n'), '"   ". v:val') + [''] + map(split(system('lsb_release -a | tail -n 3'), '\n'), '"   ". v:val') + ['']    "Displays the OS release name and version in vim-startify. 
 
-let g:startify_bookmarks = ['/etc/ansible/hosts', '~/.bashrc', '~/.vimrc', '~/.alias'] 			"Hard-coded vim-startify bookmarks. 
+let g:startify_bookmarks = ['/etc/ansible/hosts', '~/.bashrc', '~/.alias', '~/.vimrc', '~/.ssh/config'] 			"Hard-coded vim-startify bookmarks. 
 
 let g:startify_session_delete_buffers = 1                                       "Deletes any session file buffers when a session is loaded. 
 
