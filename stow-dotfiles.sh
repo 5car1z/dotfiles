@@ -1,3 +1,5 @@
+rm ~/.bashrc
+
 stow bash
 stow cheat
 stow git
