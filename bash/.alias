@@ -81,6 +81,13 @@ alias tdt='tmux detach'
 alias trs='tmux rename-session -t'
 alias tks='tmux kill-session -t'
 
+# logging
+alias tail-auth='tail -f /var/log/auth.log'
+alias tail-syslog='tail -f /var/log/syslog'
+
+alias nginx-tail-access='tail -f /var/log/nginx/access.log'
+alias nginx-tail-error='tail -f /var/log/nginx/access.log'
+
 # Arch Linux
 alias fetch2="fetch \
 --block_range 1 8 \
