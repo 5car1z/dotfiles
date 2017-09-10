@@ -52,3 +52,6 @@
 [submodule "vim/.vim/bundle/vim-numbertoggle"]
 	path = vim/.vim/bundle/vim-numbertoggle
 	url = https://github.com/jeffkreeftmeijer/vim-numbertoggle
+[submodule "vim/.vim/bundle/ansible-vim"]
+	path = vim/.vim/bundle/ansible-vim
+	url = https://github.com/pearofducks/ansible-vim.git
