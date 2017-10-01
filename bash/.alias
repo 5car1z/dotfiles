@@ -21,6 +21,10 @@ alias la="exa -lagh"
 alias lt="exa -T"
 alias lg="exa -lagh --git"
 
+# xclip
+# https://askubuntu.com/questions/383462/unable-to-paste-with-xclip-outside-of-terminal#383473
+alias xclip="xclip -selection primary"
+
 # list 'ls'.
 #alias ls='ls --color=auto'
 #alias l="ls -lF ${colorflag}"
