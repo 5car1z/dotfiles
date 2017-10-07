@@ -11,3 +11,6 @@
 	helper = cache --timeout 3600
 [help]
 	autocorrect = 1
+[alias]
+        open = "!f() { REPO_URL=$(git config remote.origin.url); xdg-open ${REPO_URL%%.git}; }; f"
+
